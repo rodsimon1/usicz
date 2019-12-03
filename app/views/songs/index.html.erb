@@ -28,9 +28,9 @@
           <td><%= song.artist %></td>
           <td><%= song.album %></td>
           <td><%= song.genre %></td>
-          <% if song.platform_id == Platform.find(1).id %>
+          <% if song.platform_id == Platform.first.id %>
             <td><i class="fab fa-youtube fa-2x"></i></td>
-          <% elsif song.platform_id == Platform.find(2).id %>
+          <% elsif song.platform_id == Platform.second.id %>
             <td><i class="fab fa-soundcloud fa-2x"></i></td>
           <% else %>
             <td><i class="fas fa-question"></i></td>
