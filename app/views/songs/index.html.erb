@@ -1,2 +1,44 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<div style="margin-left: 150px;">
+  <h1>Songs#index</h1>
+  <p>Find me in app/views/songs/index.html.erb</p>
+
+  <table class="table table-borderless table-hover">
+    <thead class="">
+      <!-- color: #F0EEEE -->
+      <!-- hover: #C7C1C1 -->
+      <tr>
+        <th>song</th>
+        <th>artist</th>
+        <th>album</th>
+        <th>genre</th>
+        <th>source</th>
+      </tr>
+    </thead>
+
+    <tbody>
+<!--       <tr>
+        <td>Hey Jude</td><td>Beatles</td><td>White Album</td><td>Rock</td><td><i class="fab fa-youtube fa-2x"></i></td>
+      </tr>
+ -->
+      <% @songs.each do |song| %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist %></td>
+          <td><%= song.album %></td>
+          <td><%= song.genre %></td>
+          <% if song.platform_id == 1 %>
+            <td><i class="fab fa-youtube fa-2x"></i></td>
+          <% elsif song.platform_id == 2 %>
+            <td><i class="fab fa-soundcloud fa-2x"></i></td>
+          <% else %>
+            <td><i class="fas fa-question"></i></td>
+          <% end %>
+
+          <!-- <td><%#song.platform_id %> </td> -->
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+
+</div>
