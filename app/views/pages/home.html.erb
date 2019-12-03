@@ -1,4 +1,11 @@
 <div class="hero-section">
+  <p class="d-flex justify-content-end">
+    <% if current_user %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path, method: :get %>
+    <% end %>
+  </p>
   <div class="hero-title">
     <div class="big-logo">i!iusicz</div>
     <div class="scroll-down">scroll down <i class="fas fa-angle-double-down"></i></div>
