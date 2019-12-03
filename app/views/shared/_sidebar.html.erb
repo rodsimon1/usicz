@@ -9,7 +9,7 @@
       <li class="appear-text">
         <%= link_to "#" do %>
           <span class="logobar-text">
-              i!iusicz
+            i!iusicz
           </span>
         <% end %>
       </li>
@@ -17,7 +17,7 @@
         <%= link_to "#" do %>
           <%= image_tag("playlist-icon.png", width:'30') %>
           <span class="nav-text">
-              Add Playlist
+            Add Playlist
           </span>
         <% end %>
       </li>
@@ -27,7 +27,7 @@
         <%= link_to "#" do %>
           <%= image_tag("twitter-icon.png", width:'30') %>
           <span class="nav-text">
-              Twitter
+            Twitter
           </span>
         <% end %>
       </li>
@@ -35,7 +35,7 @@
         <%= link_to "#" do %>
           <%= image_tag("instagram-icon.png", width:'30') %>
           <span class="nav-text">
-              Instagram
+            Instagram
           </span>
         <% end %>
       </li>
@@ -43,7 +43,7 @@
         <%= link_to "#" do %>
           <%= image_tag("fb-icon.png", width:'30') %>
           <span class="nav-text">
-              Facebook
+            Facebook
           </span>
         <% end %>
       </li>
@@ -51,10 +51,15 @@
           <%= image_tag("blank.png", width:'30') %>
       </li>
       <li class="m-2">
-        <%= link_to "#" do %>
+        <%# link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
           <%= image_tag("signout-icon.png", width:'30') %>
           <span class="nav-text">
+            <% if current_user %>
               Sign Out
+            <% else %>
+              Sign In
+            <% end %>
           </span>
         <% end %>
       </li>
