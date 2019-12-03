@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   get '/kitchen_sink', to: 'pages#kitchen_sink' if Rails.env.development?
 
+  resources :songs, only: [:index, :delete]
+  resources :playlist_imports, only: [:new, :create]
 
 end

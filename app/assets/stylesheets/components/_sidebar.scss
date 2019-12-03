@@ -1,22 +1,7 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
-
-.fa-2x {
-font-size: 1.4em;
-}
-.fa {
-position: relative;
-display: table-cell;
-width: 36px; // icons size (original 60px)
-height: 36px;
-text-align: center;
-vertical-align: middle;
-// font-size:20px;
-}
-
-
 .main-menu:hover,nav.main-menu.expanded {
-width:120px; // expanded sidebar (original 250px)
+width:150px; // expanded sidebar (original 250px)
 overflow:visible;
 }
 
@@ -28,22 +13,22 @@ top:0;
 bottom:0;
 height:100%;
 left:0;
-width:32px; // sidebar size
+width:60px; // sidebar size
 overflow:hidden;
--webkit-transition:width .05s linear;
-transition:width .05s linear;
+-webkit-transition:width .01s linear;
+transition:width .01s linear;
 -webkit-transform:translateZ(0) scale(1,1);
 z-index:1000;
 }
 
 .main-menu>ul {
-margin:7px 0;
+margin:16px 8px;
 }
 
 .main-menu li {
 position:relative;
 display:block;
-width:119px; // blue menu (needs to be -1 px)
+width:140px; // menu when hover (needs to be -1 px)
 }
 
 .main-menu li>a {
@@ -51,14 +36,13 @@ position:relative;
 display:table;
 border-collapse:collapse;
 border-spacing:0;
-color:#999;
- font-family: arial;
+color:#333;
+font-family: arial;
 font-size: 14px;
 text-decoration:none;
 -webkit-transform:translateZ(0) scale(1,1);
 -webkit-transition:all .1s linear;
 transition:all .1s linear;
-
 }
 
 .main-menu .nav-icon {
@@ -77,6 +61,7 @@ display:table-cell;
 vertical-align:middle;
 width:190px;
 font-family: 'Roboto', sans-serif;
+padding-left: 16px;
 }
 
 .main-menu>ul.bottom-buttons {
@@ -111,19 +96,24 @@ outline:0;
 margin:0;
 padding:0;
 }
+
 .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
 background-color:#444;
 }
+
 .sidebar {
 float: left;
 background: #e2e2e2;
 width: 100%;
 height: 100%;
 }
-@font-face {
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+
+.logobar-text {
+font-size: 2.6em;
+font-weight:bolder;
 }
+
+.main-menu .appear-text { display: none; }
+.main-menu:hover .appear-logo { display: none; }
+.main-menu:hover .appear-text { display: inline; }
