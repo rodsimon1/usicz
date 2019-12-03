@@ -1,22 +1,21 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 .fa-2x {
-font-size: 2em;
+font-size: 1.4em;
 }
 .fa {
 position: relative;
 display: table-cell;
-width: 60px;
+width: 36px; // icons size (original 60px)
 height: 36px;
 text-align: center;
 vertical-align: middle;
-font-size:20px;
+// font-size:20px;
 }
 
 
 .main-menu:hover,nav.main-menu.expanded {
-width:250px;
+width:120px; // expanded sidebar (original 250px)
 overflow:visible;
 }
 
@@ -28,7 +27,7 @@ top:0;
 bottom:0;
 height:100%;
 left:0;
-width:60px;
+width:32px; // sidebar size
 overflow:hidden;
 -webkit-transition:width .05s linear;
 transition:width .05s linear;
@@ -43,7 +42,7 @@ margin:7px 0;
 .main-menu li {
 position:relative;
 display:block;
-width:250px;
+width:119px; // blue menu (needs to be -1 px)
 }
 
 .main-menu li>a {
@@ -79,7 +78,7 @@ width:190px;
   font-family: 'Titillium Web', sans-serif;
 }
 
-.main-menu>ul.logout {
+.main-menu>ul.bottom-buttons {
 position:absolute;
 left:0;
 bottom:0;
@@ -115,7 +114,7 @@ padding:0;
 color:#fff;
 background-color:#5fa2db;
 }
-.area {
+.sidebar {
 float: left;
 background: #e2e2e2;
 width: 100%;
