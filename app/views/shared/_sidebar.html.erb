@@ -1,22 +1,24 @@
 <div class="sidebar">
   <nav class="main-menu">
     <ul>
-        <li>
-          <%= link_to "#", class: "navbar-brand" do %>
-            <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", width:30 %>
+      <li>
+        <%= link_to "#", class: "navbar-brand" do %>
+          <%= image_tag("/assets/images/soundcloud-logo.png", width:'30') %>
+          <%# image_tag("../../images/logo.png", width:'30') %>
+          <%# image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", width:30 %>
+            <span class="nav-text">
+                Usicz
+            </span>
+          <% end %>
+      </li>
+      <li class="has-subnav">
+          <a href="#">
+             <i class="fa fa-list fa-2x"></i>
               <span class="nav-text">
-                  Usicz
+                  Add a Playlist
               </span>
-            <% end %>
-        </li>
-        <li class="has-subnav">
-            <a href="#">
-               <i class="fa fa-list fa-2x"></i>
-                <span class="nav-text">
-                    Add a Playlist
-                </span>
-            </a>
-        </li>
+          </a>
+      </li>
 <!--
         <li>
             <a href="#">
@@ -84,51 +86,47 @@
         </li>
 -->
     </ul>
-
     <ul class="bottom-buttons">
-        <li>
-           <a href="#">
-                 <i class="fa fab fa-twitter-square fa-2x"></i>
-                <span class="nav-text">
-                    Twitter
-                </span>
-            </a>
-        </li>
-
-        <li>
-           <a href="#">
-                 <i class="fa fab fa-instagram fa-2x"></i>
-                <span class="nav-text">
-                    Instagram
-                </span>
-            </a>
-        </li>
-        <li>
-           <a href="#">
-                 <i class="fa fab fa-facebook-square fa-2x"></i>
-                <span class="nav-text">
-                    Facebook
-                </span>
-            </a>
-        </li>
-
-        <li>
-           <a href="#">
-                 <i class="fa fas fa-ghost fa-2x"></i>
-                <span class="nav-text">
-                    Boooooh
-                </span>
-            </a>
-        </li>
-
-        <li>
-           <a href="#">
-                 <i class="fa fa-power-off fa-2x"></i>
-                <span class="nav-text">
-                    Logout
-                </span>
-            </a>
-        </li>
+      <li>
+         <a href="#">
+               <i class="fa fab fa-twitter-square fa-2x"></i>
+              <span class="nav-text">
+                  Twitter
+              </span>
+          </a>
+      </li>
+      <li>
+         <a href="#">
+               <i class="fa fab fa-instagram fa-2x"></i>
+              <span class="nav-text">
+                  Instagram
+              </span>
+          </a>
+      </li>
+      <li>
+         <a href="#">
+               <i class="fa fab fa-facebook-square fa-2x"></i>
+              <span class="nav-text">
+                  Facebook
+              </span>
+          </a>
+      </li>
+      <li>
+         <a href="#">
+               <i class="fa fas fa-ghost fa-2x"></i>
+              <span class="nav-text">
+                  Boooooh
+              </span>
+          </a>
+      </li>
+      <li>
+         <a href="#">
+               <i class="fa fa-power-off fa-2x"></i>
+              <span class="nav-text">
+                  Logout
+              </span>
+          </a>
+      </li>
     </ul>
   </nav>
 </div>
