@@ -19,10 +19,22 @@
 
 .scroll-down {
   position: absolute;
-  margin-top: 30%;
+  margin-top: 25%;
   font-size: 36px;
 }
 
 .fa-angle-double-down {
   font-size: 24px;
+}
+
+.cards {
+  width: 260px;
+  height: 260px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: light-gray;
+  color: black;
+  font-size: 41px;
+  font-weight: bold;
+  padding-top: 15%;
+  padding: 2%;
 }
