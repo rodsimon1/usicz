@@ -1,9 +1,48 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,300,700|Raleway:400,100,300,700,500");
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
+$body-font: "Roboto", "Helvetica", "sans-serif";
 $headers-font: "Raleway", "Helvetica", "sans-serif";
+
+.p {
+  font-size: 24px;
+}
+
+.p-2 {
+  font-size: 36px;
+}
+
+.p-bold {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.categories-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.cards-text {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.big-logo {
+  font-size: 144px;
+  font-weight: bold;
+}
+
+.medium-logo {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.scroll-down {
+  font-size: 36px;
+  font-weight: bold;
+}
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+.hero-section {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), image-url('background-1.png');
+  width: 100wh;
+  height: 110vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  margin: 0;
+}
+
+.hero-title {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scroll-down {
+  position: absolute;
+  margin-top: 30%;
+  font-size: 36px;
+}
+
+.fa-angle-double-down {
+  font-size: 24px;
+}
