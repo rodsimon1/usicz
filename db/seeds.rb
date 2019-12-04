@@ -22,10 +22,10 @@ youtube = Platform.create(name: 'Youtube')
 soundcloud = Platform.create(name: 'Soundcloud')
 
 puts 'Creating songs...'
-song_1 = Song.create(title: "Baltimore", artist: "Nina Simone", album: "Sinnerman", genre: "Jazz", external_id: "https://www.youtube.com/watch?v=EJIVV-mnPyY", user_id: camille.id, platform_id: youtube.id)
-song_2 = Song.create(title: "Don't go breaking my heart", artist: "Elton John", album: "Crocodile Rock", genre: "Pop Rock", external_id: "https://www.youtube.com/watch?v=z0qW9P-uYfM", user_id: rodrigo.id, platform_id: soundcloud.id)
-song_3 = Song.create(title: "Let the music play", artist: "Barry White", album: "Harlem 1965", genre: "Soul", external_id: "https://www.youtube.com/watch?v=1SL9-p-m0gs", user_id: mahan.id, platform_id: soundcloud.id)
-song_4 = Song.create(title: "Lingua", artist: "Caetano Veloso e Elza Soares", album: "Velô", genre: "Hip Hop", external_id: "https://www.youtube.com/watch?v=tX7cqBreLUY", user_id: daniel.id, platform_id: youtube.id)
+song_1 = Song.create(title: "Baltimore", artist: "Nina Simone", album: "Sinnerman", genre: "Jazz", external_id: "EJIVV-mnPyY", user_id: camille.id, platform_id: youtube.id)
+song_2 = Song.create(title: "Don't go breaking my heart", artist: "Elton John", album: "Crocodile Rock", genre: "Pop Rock", external_id: "z0qW9P-uYfM", user_id: rodrigo.id, platform_id: soundcloud.id)
+song_3 = Song.create(title: "Let the music play", artist: "Barry White", album: "Harlem 1965", genre: "Soul", external_id: "1SL9-p-m0gs", user_id: mahan.id, platform_id: soundcloud.id)
+song_4 = Song.create(title: "Lingua", artist: "Caetano Veloso e Elza Soares", album: "Velô", genre: "Hip Hop", external_id: "tX7cqBreLUY", user_id: daniel.id, platform_id: youtube.id)
 
 
 
