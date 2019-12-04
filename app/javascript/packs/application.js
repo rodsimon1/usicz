@@ -1,6 +1,10 @@
 import "bootstrap";
-
+import { datenovo } from './test';
+import { playernovo } from './player_two';
 import { initSweetalert } from '../plugins/init_sweetalert';
+
+datenovo();
+playernovo();
 
 initSweetalert('#MusicIcon', {
   title: "You library is empty",
@@ -9,4 +13,7 @@ initSweetalert('#MusicIcon', {
   buttons: ["import", "ok"],
   closeOnClickOutside: true
 });
+
+
+
 
