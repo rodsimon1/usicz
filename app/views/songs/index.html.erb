@@ -1,4 +1,4 @@
-<%= render 'shared/sidebar' %>
+    <%= render 'shared/sidebar' %>
 
 <div style="margin-left: 150px;">
   <h1>Songs#index</h1>
@@ -42,5 +42,34 @@
 
     </tbody>
   </table>
+
+<!-- TESTS ON PLAYERS - STARTS HERE -->
+
+<!-- <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div> -->
+
+<!-- TESTS - CODEPEN PLAYERS - JAVASCRIPT -->
+<%# render 'shared/player_two' %>
+<!-- <div class="datenovo"></div> -->
+
+<!-- HTML NATURAL PLAYER -->
+<!-- <audio controls>
+  <source src="https://www.youtube.com/watch?v=9F49XgzlZgA" type="audio/oog">
+</audio>
+ -->
+
+ <!-- YOUTUBE EMBED PLAYER -->
+<% new_ext_id = @songs[3].external_id %>
+<iframe class="youtube-player" width="560" height="100"
+  src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>
+  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+<!-- SOUNDCLOUD EMBED PLAYER
+<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/21478921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+</iframe>
+ -->
+<!-- TESTS ON PLAYERS - ENDS HERE -->
 
 </div>
