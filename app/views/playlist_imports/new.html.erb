@@ -1,2 +1,25 @@
-<h1>PlaylistImports#new</h1>
-<p>Find me in app/views/playlist_imports/new.html.erb</p>
+<div style="margin-left: 150px;">
+  <h1>PlaylistImports#new</h1>
+  <p>Find me in app/views/playlist_imports/new.html.erb</p>
+  <%= render 'shared/sidebar' %>
+
+  <% @songs = Song.all %>
+<div class="d-flex justify-content-center" style="margin-right: 150px;">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle playlist-import" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <strong>Select music source</strong>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Youtube <i class="fab fa-youtube"></i></a>
+      <a class="dropdown-item" href="#">SoundCloud <i class="fab fa-soundcloud"></i></a>
+      <a class="dropdown-item" href="#">More coming soon!</a>
+    </div>
+  </div>
+</div>
+<!--    <select>
+    <option value="><strong>Select music source</strong></option>
+    <option value="">Youtube <i class="fab fa-youtube"></i></option>
+    <option value="">SoundCloud <i class="fab fa-soundcloud"></i></option>
+    <option value="">More coming soon!</option>
+  </select> -->
+
