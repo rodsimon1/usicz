@@ -6,14 +6,23 @@
       <%= link_to "Sign In", new_user_session_path, method: :get %>
     <% end %>
   </p>
-  <div class="hero-title">
+  <div class="hero-title d-flex flex-column">
+    <div>
+    <%= image_tag('usicz-logo.png', width: '200') %>
+    </div>
     <div class="big-logo">i!iusicz</div>
     <div class="scroll-down">scroll down <i class="fas fa-angle-double-down"></i></div>
   </div>
 </div>
 
+<div class="hero-title d-flex flex-column mt-5">
+    <div>
+    <%= image_tag('usicz-logo.png', width: '80') %>
+    </div>
+    <div class="medium-logo">i!iusicz</div>
+</div>
 
-<div class="p-2"> centralize your music in a unique place </div>
+<div class="p2 d-flex justify-content-center"> centralize your music in a unique place </div>
 
 
 <div class="container">
@@ -22,4 +31,8 @@
     <div class="cards col-3">2_<br>import your songs</div>
     <div class="cards col-3">3_<br>listen to your music</div>
   </div>
+  <div class="d-flex justify-content-center">
+    <p class="button-black m-5">start</p>
+  </div>
+
 </div>
