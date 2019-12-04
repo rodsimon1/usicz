@@ -1,36 +1,18 @@
-<%= render 'shared/sidebar' %>
 <div style="margin-left: 150px;">
-  <h1>Songs#new</h1>
-  <p>Find me in app/views/songs/new.html.erb</p>
+  <h1>PlaylistImports#new</h1>
+  <p>Find me in app/views/playlist_imports/new.html.erb</p>
+  <%= render 'shared/sidebar' %>
 
-  <table class="table table-borderless table-hover">
-    <thead class="">
-      <!-- color: #F0EEEE -->
-      <!-- hover: #C7C1C1 -->
-      <tr>
-        <th>song</th>
-        <th>artist</th>
-        <th>album</th>
-        <th>genre</th>
-        <th>source</th>
-      </tr>
-    </thead>
-
-    <tbody>
-<!--       <tr>
-        <td>Hey Jude</td><td>Beatles</td><td>White Album</td><td>Rock</td><td><i class="fab fa-youtube fa-2x"></i></td>
-      </tr>
- -->
-        <tr>
-          <td><i>song title</i></td>
-          <td><i>artist name</i></td>
-          <td><i>album name</i></td>
-          <td><i>genre</i></td>
-          <td><i class="fas fa-music" id="MusicIcon"></i></td>
-          <!-- <td><%#song.platform_id %> </td> -->
-        </tr>
-
-    </tbody>
-  </table>
-
+  <div class="d-flex justify-content-center" style="margin-right: 150px;">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle playlist-import" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <strong>Select music source</strong>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Youtube <i class="fab fa-youtube"></i></a>
+        <a class="dropdown-item" href="#">SoundCloud <i class="fab fa-soundcloud"></i></a>
+        <a class="dropdown-item" href="#">More coming soon!</a>
+      </div>
+    </div>
+  </div>
 </div>
