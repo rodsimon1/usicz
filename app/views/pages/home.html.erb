@@ -6,12 +6,15 @@
       <%= link_to "Sign in", new_user_session_path, method: :get %>
     <% end %>
   </p>
+
   <div class="hero-title d-flex flex-column">
-    <div>
-    <%= image_tag('usicz-logo.png', width: '200') %>
-    </div>
-    <div class="big-logo">i!iusicz</div>
-    <div class="scroll-down">scroll down <i class="fas fa-angle-double-down"></i></div>
+    <%= link_to songs_path, class: "logo-button-style" do  %>
+      <div>
+      <%= image_tag('usicz-logo.png', width: '200') %>
+      </div>
+      <div class="big-logo">i!iusicz</div>
+    <% end %>
+      <div class="scroll-down">scroll down <i class="fas fa-angle-double-down"></i></div>
   </div>
 </div>
 
