@@ -1,7 +1,7 @@
 # Returns list of songs from a given playlist-url
 class YoutubePlaylistImportService
   BASE_URL = 'https://www.googleapis.com/youtube/v3/playlistItems'
-  KEY = 'AIzaSyBYH0dPlpMxGXyo-JzTOZUUVEi8hj2L574'
+  KEY = 'AIzaSyA8aJ6Pdxab253QXFGAoTpp6GOui9z-bkE'
   TRACK_URL = "https://www.googleapis.com/youtube/v3/videos"
 
   def initialize(playlist_url, user_id)
