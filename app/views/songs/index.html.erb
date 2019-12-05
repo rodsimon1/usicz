@@ -1,4 +1,4 @@
-    <%= render 'shared/sidebar' %>
+<%= render 'shared/sidebar' %>
 
 <div style="margin-left: 150px;">
   <h1>Songs#index</h1>
@@ -72,13 +72,8 @@
 </audio>
  -->
 
- <!-- YOUTUBE EMBED PLAYER -->
-<% new_ext_id = @songs[3].external_id %>
-<iframe class="youtube-player" width="560" height="100"
-  src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>
-  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<!-- YOUTUBE EMBED PLAYER -->
+<%= render 'shared/footbar' %>
 
 <!-- SOUNDCLOUD EMBED PLAYER
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
