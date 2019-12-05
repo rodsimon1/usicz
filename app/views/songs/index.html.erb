@@ -1,6 +1,6 @@
 <%= render 'shared/sidebar' %>
 
-<div style="margin-left: 150px;">
+<div style="margin-left: 90px;">
   <h1>Songs#index</h1>
   <p>Find me in app/views/songs/index.html.erb</p>
 
@@ -33,7 +33,7 @@
             <% elsif song.platform_id == Platform.second.id %>
               <td class="song-row"><a href=""> <i class="fab fa-soundcloud fa-2x"></i></a></td>
             <% else %>
-              <td class="song-row"><a href=""> <i class="fas fa-music" id=“MusicIcon”></i></a></td>
+              <td class="song-row"><a href=""> <i class="fas fa-music" id="MusicIcon"></i></a></td>
             <% end %>
           </tr>
       <% end %>

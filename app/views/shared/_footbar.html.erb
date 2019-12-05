@@ -3,8 +3,7 @@
   <nav class="main-video">
     <% new_ext_id = @songs[0].external_id %>
     <iframe class="youtube-player" width="560" height="100"
-      src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>
       frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
+      allowfullscreen src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>>
     </iframe>
   </nav>
