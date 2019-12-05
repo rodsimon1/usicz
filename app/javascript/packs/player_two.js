@@ -1,3 +1,5 @@
+// LATER ON THIS FIILE CAN BE DELETED
+
 const playernovo = () => {
 
 $(function()
