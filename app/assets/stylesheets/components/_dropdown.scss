@@ -1,16 +1,21 @@
 
 .playlist-import {
-  width: 500px;
+  width: 500px
   font-size: 20px;
 
 }
 
+.dropdown-item {
+  padding: 15px;
+}
+
 .dropdown-item i {
-  text-align: right;
+  // text-align: right;]
+  float: right;
 }
 
 .show {
-  width: 500px;
+  width: 50vw;
 }
 
 .field {

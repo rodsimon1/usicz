@@ -1,4 +1,4 @@
-    <%= render 'shared/sidebar' %>
+<%= render 'shared/sidebar' %>
 
 <div style="margin-left: 150px;">
   <h1>Songs#index</h1>
@@ -23,22 +23,37 @@
       </tr>
  -->
       <% @songs.each do |song| %>
-        <tr>
-          <td><%= song.title %></td>
-          <td><%= song.artist %></td>
-          <td><%= song.album %></td>
-          <td><%= song.genre %></td>
-          <% if song.platform_id == Platform.first.id %>
-            <td><i class="fab fa-youtube fa-2x"></i></td>
-          <% elsif song.platform_id == Platform.second.id %>
-            <td><i class="fab fa-soundcloud fa-2x"></i></td>
-          <% else %>
-            <td><i class="fas fa-music" id=“MusicIcon”></i></td>
-          <% end %>
-
-          <!-- <td><%#song.platform_id %> </td> -->
-        </tr>
+          <tr>
+            <td class="song-row"><a href=""> <%= song.title %></a></td>
+            <td class="song-row"><a href=""><%= song.artist %></a></td>
+            <td class="song-row"><a href=""> <%= song.album %></a></td>
+            <td class="song-row"><a href=""> <%= song.genre %></a></td>
+            <% if song.platform_id == Platform.first.id %>
+              <td class="song-row"><a href=""> <i class="fab fa-youtube fa-2x"></i></a></td>
+            <% elsif song.platform_id == Platform.second.id %>
+              <td class="song-row"><a href=""> <i class="fab fa-soundcloud fa-2x"></i></a></td>
+            <% else %>
+              <td class="song-row"><a href=""> <i class="fas fa-music" id=“MusicIcon”></i></a></td>
+            <% end %>
+          </tr>
       <% end %>
+
+<!--       You could include an anchor inside every <td>, like so:
+      <tr>
+        <td><a href="#">Blah Blah</a></td>
+        <td><a href="#">1234567</a></td>
+        <td><a href="#">more text</a></td>
+      </tr>
+
+      You could then use display:block; on the anchors to make the full row clickable.
+      tr:hover {
+         background: red;
+      }
+      td a {
+         display: block;
+         border: 1px solid black;
+         padding: 16px;
+      } -->
 
     </tbody>
   </table>
@@ -57,13 +72,8 @@
 </audio>
  -->
 
- <!-- YOUTUBE EMBED PLAYER -->
-<% new_ext_id = @songs[3].external_id %>
-<iframe class="youtube-player" width="560" height="100"
-  src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>
-  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<!-- YOUTUBE EMBED PLAYER -->
+<%= render 'shared/footbar' %>
 
 <!-- SOUNDCLOUD EMBED PLAYER
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"

@@ -1,10 +1,10 @@
 import "bootstrap";
-import { datenovo } from './test';
-import { playernovo } from './player_two';
+import { datenovo } from './test';  // LATER ON THIS LINE CAN BE DELETED
+import { playernovo } from './player_two';  // LATER ON THIS LINE CAN BE DELETED
 import { initSweetalert } from '../plugins/init_sweetalert';
 
-datenovo();
-playernovo();
+datenovo();  // LATER ON THIS LINE CAN BE DELETED
+playernovo();  // LATER ON THIS LINE CAN BE DELETED
 
 initSweetalert('#MusicIcon', {
   title: "You library is empty",
