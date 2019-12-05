@@ -211,6 +211,7 @@ $(function()
     function initPlayer()
   {
         audio = new Audio();
+        //DANIEL THATS NOT HOW WE DECLARE VARIABLES IN JS AND ITS EMPTY
 
     selectTrack(0);
 

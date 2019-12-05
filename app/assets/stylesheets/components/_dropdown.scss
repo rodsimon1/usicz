@@ -1,8 +1,8 @@
 
 .playlist-import {
   width: 500px;
-  height: 60px;
   font-size: 20px;
+
 }
 
 .dropdown-item i {
@@ -11,4 +11,31 @@
 
 .show {
   width: 500px;
+}
+
+.field {
+  text-align: right;
+  width: 50vw;
+  height: 60px;
+
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 8px;
+}
+
+.box {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }

@@ -28,3 +28,19 @@ text-decoration: none;
 .button-black a {
   color: white;
 }
+
+.button-white a {
+  color: black;
+}
+
+.button-white:hover {
+  background: black;
+  color: white;
+  border: black;
+}
+
+.button-black:hover {
+  background: white;
+  color: black;
+  border: black;
+}
