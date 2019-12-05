@@ -1,9 +1,9 @@
 <div class="hero-section">
   <p class="d-flex justify-content-end">
     <% if current_user %>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     <% else %>
-      <%= link_to "Sign In", new_user_session_path, method: :get %>
+      <%= link_to "Sign in", new_user_session_path, method: :get %>
     <% end %>
   </p>
   <div class="hero-title d-flex flex-column">
@@ -22,7 +22,7 @@
     <div class="medium-logo">i!iusicz</div>
 </div>
 
-<div class="p2 d-flex justify-content-center"> centralize your music in a unique place </div>
+<div class="h1 d-flex justify-content-center"> centralize your music in a unique place </div>
 
 
 <div class="container">
