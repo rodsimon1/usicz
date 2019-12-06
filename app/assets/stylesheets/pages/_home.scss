@@ -2,11 +2,12 @@
 .hero-section {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), image-url('background-1.png');
   width: 100wh;
-  height: 110vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
   margin: 0;
+  position: relative;
 }
 
 .hero-title {
@@ -19,26 +20,49 @@
 
 .scroll-down {
   position: absolute;
-  margin-top: 25%;
   font-size: 36px;
+  bottom: 10px;
 }
 
 .fa-angle-double-down {
   font-size: 24px;
 }
 
-.cards {
-  width: 260px;
+
+$banana: 40px;
+
+.card {
   height: 260px;
+  width: 260px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   background: light-gray;
   color: black;
-  font-size: 41px;
+  p {
+    font-size: $banana;
+  }
   font-weight: bold;
-  margin-top:30%;
-  padding-top: 15%;
-  padding: 2%;
+  margin-top: 10%;
+  padding: 5%;
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+@media(max-width: 768px) {
+  .card {
+    p {
+      font-size: $banana*0.6;
+    }
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 
 .second-logo {
   width: 100px;

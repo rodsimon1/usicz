@@ -1,9 +1,9 @@
 <div class="hero-section">
-  <p class="d-flex justify-content-end">
+  <p class="d-flex justify-content-end mx-3">
     <% if current_user %>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+      <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nostyle"%>
     <% else %>
-      <%= link_to "Sign in", new_user_session_path, method: :get %>
+      <%= link_to "sign in", new_user_session_path, method: :get %>
     <% end %>
   </p>
   <div class="hero-title d-flex flex-column">
@@ -11,7 +11,11 @@
     <%= image_tag('usicz-logo.png', width: '200') %>
     </div>
     <div class="big-logo">i!iusicz</div>
-    <div class="scroll-down">scroll down <i class="fas fa-angle-double-down"></i></div>
+
+    <div class="scroll-down mb-5">
+      <a href="#target" class="nostyle">scroll down <i class="fas fa-angle-double-down"></a></i>
+    </div>
+
   </div>
 </div>
 
@@ -24,15 +28,34 @@
 
 <div class="h1 d-flex justify-content-center"> centralize your music in a unique place </div>
 
-
-<div class="container">
-  <div class="row d-flex justify-content-between">
-    <div class="cards col-3">1_<br>create your account</div>
-    <div class="cards col-3">2_<br>import your songs</div>
-    <div class="cards col-3">3_<br>listen to your music</div>
+<div class="container cards">
+    <div class="card">
+      <p>
+        1_
+      </p>
+      <p>
+        create your account
+      </p>
+    </div>
+    <div class="card">
+      <p>
+        2_
+      </p>
+      <p>
+        import your songs
+      </p>
+    </div>
+    <div class="card">
+      <p>
+        3_
+      </p>
+      <p>
+        listen to your music
+      </p>
   </div>
-  <div class="d-flex justify-content-center">
-    <button class="button-black m-5"><a href="<%= songs_path %>">start</a></button>
-  </div>
 
+</div>
+
+<div class="d-flex justify-content-center">
+  <button id="target" class="button-black m-5"><a href="<%= songs_path %>">start</a></button>
 </div>

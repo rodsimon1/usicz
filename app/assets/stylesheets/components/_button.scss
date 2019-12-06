@@ -12,21 +12,29 @@ font-weight: bold;
 }
 
 .button-black {
-border: 1px solid black;
-border-radius: 50px;
-width: 80px;
-height: 40px;
-box-shadow: 0 10px 30px rgba(0,0,0,.1);
-background: black;
-color: white;
-text-align: center;
-padding: 8px;
-font-weight: bold;
-text-decoration: none;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 80px;
+  height: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: black;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  a {
+    color: white;
+  }
 }
 
-.button-black a {
-  color: white;
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
 }
 
 .button-white a {
@@ -35,12 +43,15 @@ text-decoration: none;
 
 .button-white:hover {
   background: black;
-  color: white;
   border: black;
+  a {
+    color: white;
+  }
 }
 
 .button-black:hover {
   background: white;
-  color: black;
-  border: black;
+  a {
+    color: black;
+  }
 }
