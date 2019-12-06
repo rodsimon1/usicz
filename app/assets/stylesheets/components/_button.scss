@@ -1,14 +1,14 @@
 .button-white {
-border: 1px solid black;
-border-radius: 50px;
-width: 80px;
-height: 40px;
-box-shadow: 0 10px 30px rgba(0,0,0,.1);
-background: white;
-color: black;
-text-align: center;
-padding: 8px;
-font-weight: bold;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 80px;
+  height: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
 }
 
 .button-black {
@@ -44,12 +44,36 @@ a.nostyle:visited {
 .button-white:hover {
   background: black;
   border: black;
+  color: white;
   a {
     color: white;
   }
 }
 
 .button-black:hover {
+  background: white;
+  a {
+    color: black;
+  }
+}
+
+.button-homepage {
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 130px;
+  height: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: black;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  a {
+    color: white;
+  }
+}
+
+.button-homepage:hover {
   background: white;
   a {
     color: black;

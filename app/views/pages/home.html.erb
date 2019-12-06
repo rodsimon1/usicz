@@ -3,7 +3,7 @@
     <% if current_user %>
       <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nostyle"%>
     <% else %>
-      <%= link_to "sign in", new_user_session_path, method: :get %>
+      <%= link_to "sign in", new_user_session_path, method: :get, class: "nostyle"%>
     <% end %>
   </p>
 
@@ -12,9 +12,9 @@
     <%= image_tag('usicz-logo.png', width: '200') %>
     </div>
     <div class="big-logo">i!iusicz</div>
-
+    <div class="rotated">click here to start <i class="fas fa-arrow-right"></i></div>
     <div class="scroll-down mb-5">
-      <a href="#target" class="nostyle">scroll down <i class="fas fa-angle-double-down"></a></i>
+      <a href="#target" class="nostyle">learn more <i class="fas fa-angle-double-down"></a></i>
     </div>
   </div>
 </div>
