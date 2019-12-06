@@ -1,32 +1,36 @@
 <%= render 'shared/sidebar' %>
 
-<div style="margin-left: 90px;">
-  <br>
 
-  <table class="table table-borderless table-hover">
+<div style="margin-left: 90px; margin-top: 36px;">
+  <h1 class="p-bold" style="padding-left: 12px">My songs</h1>
+
+
+  <table class="table table-borderless table-hover" style="margin-top: 36px;">
     <thead class="">
       <!-- color: #F0EEEE -->
       <!-- hover: #C7C1C1 -->
       <tr>
         <th>song</th>
         <th>artist</th>
-        <th>album</th>
+        <!-- <th>album</th> -->
         <th>genre</th>
         <th>source</th>
       </tr>
     </thead>
 
     <tbody>
-<!--       <tr>
-        <td>Hey Jude</td><td>Beatles</td><td>White Album</td><td>Rock</td><td><i class="fab fa-youtube fa-2x"></i></td>
-      </tr>
- -->
       <% @songs.each do |song| %>
-          <tr>
-            <td class="song-row"><a href=""> <%= song.title %></a></td>
-            <td class="song-row"><a href=""><%= song.artist %></a></td>
-            <td class="song-row"><a href=""> <%= song.album %></a></td>
-            <td class="song-row"><a href=""> <%= song.genre %></a></td>
+      
+          <tr class="track-list-row" data-id=<%= song.external_id %>>
+            <td class="song-row"><%= song.title %></td>
+            <% if song.artist.nil? %>
+              <td class="song-row"><a href="">Artist Unknown</a></td>
+            <% else %>
+              <td class="song-row"><a href=""><%= song.artist %></a></td>
+            <% end %>
+            <!-- <td class="song-row"><%# song.album %></td> -->
+            <td class="song-row"><%= song.genre %></td>
+
             <% if song.platform_id == Platform.first.id %>
               <td class="song-row"><a href=""> <i class="fab fa-youtube fa-2x"></i></a></td>
             <% elsif song.platform_id == Platform.second.id %>
@@ -36,6 +40,7 @@
             <% end %>
           </tr>
       <% end %>
+
 
       <div class='edit_hover_class'>
         <a href='#'><%= image_tag('trash-icon.png', width: '40')  %></a>
@@ -63,26 +68,25 @@
 
 <!-- TESTS ON PLAYERS - STARTS HERE -->
 
-<!-- <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div> -->
+    <!-- <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div> -->
 
-<!-- TESTS - CODEPEN PLAYERS - JAVASCRIPT -->
-<%# render 'shared/player_two' %>
-<!-- <div class="datenovo"></div> -->
+    <!-- TESTS - CODEPEN PLAYERS - JAVASCRIPT -->
+    <%# render 'shared/player_two' %>
+    <!-- <div class="datenovo"></div> -->
 
-<!-- HTML NATURAL PLAYER -->
-<!-- <audio controls>
-  <source src="https://www.youtube.com/watch?v=9F49XgzlZgA" type="audio/oog">
-</audio>
- -->
+    <!-- HTML NATURAL PLAYER -->
+    <!-- <audio controls>
+      <source src="https://www.youtube.com/watch?v=9F49XgzlZgA" type="audio/oog">
+    </audio>
+     -->
 
-<!-- YOUTUBE EMBED PLAYER -->
-<%= render 'shared/footbar' %>
+    <!-- SOUNDCLOUD EMBED PLAYER
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/21478921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+    </iframe>
+     -->
+    <!-- TESTS ON PLAYERS - ENDS HERE -->
 
-<!-- SOUNDCLOUD EMBED PLAYER
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/21478921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-</iframe>
- -->
-<!-- TESTS ON PLAYERS - ENDS HERE -->
-
+  <!-- FOOTBAR PLAYERS -->
+  <%= render 'shared/footbar' %>
 </div>
