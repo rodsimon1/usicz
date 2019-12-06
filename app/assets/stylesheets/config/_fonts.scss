@@ -1,9 +1,11 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,700|Raleway:400,100,300,700,500");
+@import url("//fonts.googleapis.com/css?family=Gochi+Hand|Lato&display=swap");
 
 // Define fonts for body and headers
-$body-font: "Roboto", "Helvetica", "sans-serif";
+$body-font: "Roboto", "Helvetica", "sans-serif", "Gochi Hand";
 $headers-font: "Raleway", "Helvetica", "sans-serif";
+
 
 p {
   font-size: 24px;

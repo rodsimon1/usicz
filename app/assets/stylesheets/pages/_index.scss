@@ -1,3 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "logo_button_style";
+
+.edit_hover_class a{
+  visibility:hidden;
+}
+.edit_hover_class:hover a {
+ visibility:visible;
+}
