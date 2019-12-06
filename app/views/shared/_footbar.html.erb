@@ -7,3 +7,26 @@
       allowfullscreen src=<%= "https://www.youtube.com/embed/#{new_ext_id}" %>>
     </iframe>
   </nav>
+
+<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=false&width=500&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=2114406&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="500" data-height="350"></div>
+
+<script>
+
+   (function() {
+  var w = document[typeof document.getElementsByClassName === 'function' ? 'getElementsByClassName' : 'querySelectorAll']('deezer-widget-player');
+  for (var i = 0, l = w.length; i < l; i++) {
+    w[i].innerHTML = '';
+    var el = document.createElement('iframe');
+    el.src = w[i].getAttribute('data-src');
+    el.scrolling = w[i].getAttribute('data-scrolling');
+    el.frameBorder = w[i].getAttribute('data-frameborder');
+    el.setAttribute('frameBorder', w[i].getAttribute('data-frameborder'));
+    el.allowTransparency = w[i].getAttribute('data-allowTransparency');
+    el.width = w[i].getAttribute('data-width');
+    el.height = w[i].getAttribute('data-height');
+    w[i].appendChild(el);
+  }
+}());
+
+</script>
+
