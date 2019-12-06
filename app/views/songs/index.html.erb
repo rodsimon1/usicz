@@ -1,8 +1,7 @@
 <%= render 'shared/sidebar' %>
 
-<div style="margin-left: 90px;">
-  <h1>Songs#index</h1>
-  <p>Find me in app/views/songs/index.html.erb</p>
+<div class="index-body">
+  <h1>My playlist</h1>
 
   <table class="table table-borderless table-hover">
     <thead class="">
@@ -11,7 +10,7 @@
       <tr>
         <th>song</th>
         <th>artist</th>
-        <th>album</th>
+        <!-- <th>album</th> -->
         <th>genre</th>
         <th>source</th>
       </tr>
@@ -25,8 +24,14 @@
       <% @songs.each do |song| %>
           <tr>
             <td class="song-row"><a href=""> <%= song.title %></a></td>
-            <td class="song-row"><a href=""><%= song.artist %></a></td>
-            <td class="song-row"><a href=""> <%= song.album %></a></td>
+
+            <% if song.artist.nil? %>
+              <td class="song-row"><a href="">Artist Unknown</a></td>
+            <% else %>
+              <td class="song-row"><a href=""><%= song.artist %></a></td>
+            <% end %>
+
+            <!-- <td class="song-row"><a href=""> <%= song.album %></a></td> -->
             <td class="song-row"><a href=""> <%= song.genre %></a></td>
             <% if song.platform_id == Platform.first.id %>
               <td class="song-row"><a href=""> <i class="fab fa-youtube fa-2x"></i></a></td>
