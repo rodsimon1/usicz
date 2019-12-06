@@ -5,6 +5,7 @@
   <!-- <h1>Songs#index</h1> -->
   <!-- <p>Find me in app/views/songs/index.html.erb</p> -->
 
+
   <table class="table table-borderless table-hover" style="margin-top: 36px;">
     <thead class="">
       <!-- color: #F0EEEE -->
@@ -12,7 +13,7 @@
       <tr>
         <th>song</th>
         <th>artist</th>
-        <th>album</th>
+        <!-- <th>album</th> -->
         <th>genre</th>
         <th>source</th>
       </tr>
@@ -20,11 +21,17 @@
 
     <tbody>
       <% @songs.each do |song| %>
+      
           <tr class="track-list-row" data-id=<%= song.external_id %>>
             <td class="song-row"><%= song.title %></td>
-            <td class="song-row"><%= song.artist %></td>
-            <td class="song-row"><%= song.album %></td>
+            <% if song.artist.nil? %>
+              <td class="song-row"><a href="">Artist Unknown</a></td>
+            <% else %>
+              <td class="song-row"><a href=""><%= song.artist %></a></td>
+            <% end %>
+            <!-- <td class="song-row"><%# song.album %></td> -->
             <td class="song-row"><%= song.genre %></td>
+
             <% if song.platform_id == Platform.first.id %>
               <td class="song-row"><a href=""> <i class="fab fa-youtube fa-2x"></i></a></td>
             <% elsif song.platform_id == Platform.second.id %>
