@@ -18,13 +18,37 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#">Youtube <i class="fab fa-youtube fa-2x"></i></a>
           <a class="dropdown-item" href="#">SoundCloud <i class="fab fa-soundcloud fa-2x"></i></a>
+          <a class="dropdown-item" href="#">Deezer <img src="../../assets/images/deezer-logo.png" alt=""></a>
           <a class="dropdown-item disabled" href="#">More coming soon!<i class="fas fa-ellipsis-h fa-2x"></i></a>
         </div>
       </div>
     </div>
+
+
     <br>
+
     <div class="d-flex justify-content-center">
       <form>
+
+<!--         <select name="source-platform" form="source" autofocus>
+          <option value="select-source">Select music source</option>
+          <option value="Youtube">Youtube </option>
+          <option value="SoundCloud">SoundCloud</option>
+          <option value="Deezer">Deezer</option>
+          <option value="Soon">More coming soon!</option>
+        </select>
+ -->
+        <div class="form-group">
+          <label for="sourcePlatform">Source Platform</label>
+          <select class="form-control form-control-lg" id="select-source">
+            <option selected="">Select music source</option>
+            <option>Youtube <i class="fab fa-youtube fa-2x"></i></option>
+            <option>SoundCloud</option>
+            <option>Deezer</option>
+            <option>More coming soon!</option>
+          </select>
+        </div>
+
         <div class="form-group field mt-3">
           <input type="url" class="form-control" id="playlistUrl" placeholder="Paste the url of a playlist here">
         </div>
