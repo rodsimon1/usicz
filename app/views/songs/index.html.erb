@@ -21,13 +21,13 @@
 
     <tbody>
       <% @songs.each do |song| %>
-      
+
           <tr class="track-list-row" data-id=<%= song.external_id %>>
             <td class="song-row"><%= song.title %></td>
             <% if song.artist.nil? %>
-              <td class="song-row"><a href="">Artist Unknown</a></td>
+              <td class="song-row">Artist Unknown</td>
             <% else %>
-              <td class="song-row"><a href=""><%= song.artist %></a></td>
+              <td class="song-row"><%= song.artist %></td>
             <% end %>
             <!-- <td class="song-row"><%# song.album %></td> -->
             <td class="song-row"><%= song.genre %></td>
