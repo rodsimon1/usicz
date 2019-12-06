@@ -28,7 +28,7 @@ class YoutubePlaylistImportService
           if track_response['items'][0]['topicDetails']['topicCategories'][0] != nil
             genre_links = track_response['items'][0]['topicDetails']['topicCategories']
             genres = genre_links.map { |genre_link| genre_link.gsub(/.*(wiki\/)/, "") }
-            @genre = genres.reject{ |i| i=="Music"}.join(", ")
+            @genre = genres.reject { |i| i == "Music" }.join(", ")
           end
           # save the created songs to DB
           @songs << Song.create!(title: title, genre: @genre, external_id: video_id, platform: @platform, user_id: @user_id)
