@@ -1,14 +1,18 @@
+.button-rounded {
+  border-radius: 50px;
+}
+
 .button-white {
-border: 1px solid black;
-border-radius: 50px;
-width: 80px;
-height: 40px;
-box-shadow: 0 10px 30px rgba(0,0,0,.1);
-background: white;
-color: black;
-text-align: center;
-padding: 8px;
-font-weight: bold;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: 80px;
+  height: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
 }
 
 .button-black {
