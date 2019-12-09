@@ -75,13 +75,14 @@ $banana: 40px;
 .rotated {
   transform: rotate(-15deg); /* Équivalent à rotateZ(45deg) */
   position: absolute;
-  left: 45%;
-  top: 18%;
+  width: 350px;
+  left: 18%;
+  top: 45%;
   font-size: 36px;
   font-family: 'Gochi Hand',
 }
 
 .opening-logo {
   width: 50vw;
-  height: 50vh;
+  height: 60vh;
 }
