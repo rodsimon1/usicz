@@ -57,7 +57,7 @@
             <% elsif song.platform_id == Platform.second.id %>
               <%= image_tag('deezer-logo.png', width: '32')  %>
             <% else %>
-              <i class="fas fa-music" id="MusicIcon"></i>
+              <i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_url %>"></i>
             <% end %>
           </td>
 
@@ -65,10 +65,7 @@
             <% if !song.id.nil? %>
               <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete %>
             <% end %>
-
-
           </td>
-
         </tr>
       <% end %>
 
