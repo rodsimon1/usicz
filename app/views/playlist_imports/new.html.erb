@@ -15,7 +15,7 @@
     <%= simple_form_for :playlist_imports, url: playlist_imports_path do |f| %>
       <%= f.input :platform_id, collection: Platform.pluck(:name, :id), prompt: 'Select music source'%>
       <%= f.input :playlist_url, placeholder: "Paste the url of a playlist here" %>
-      <%= f.button :submit, class: "btn-primary button-rounded" %>
+      <%= f.button :submit, class: "btn-primary button-rounded", value: 'add songs' %>
     <% end %>
   </div>
 </div>

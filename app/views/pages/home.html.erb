@@ -1,5 +1,5 @@
 <div class="hero-section">
-  <p class="d-flex justify-content-end mx-3">
+  <p class="sign:hover d-flex justify-content-end mx-4 pt-3">
     <% if current_user %>
       <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nostyle"%>
     <% else %>
@@ -11,9 +11,9 @@
     <div class="opening-logo">
       <%= link_to songs_path, class: "logo-button-style" do %>
         <div>
-          <%= image_tag('usicz-logo.png', width: '200') %>
+          <%= image_tag('usicz-logo.png', width: '180') %>
         </div>
-        <div class="big-logo">i!iusicz</div>
+        <div class="big-logo, width: '100'">i!iusicz</div>
         <div class="rotated">click here to start <i class="fas fa-arrow-right"></i></div>
       <% end %>
     </div>
@@ -24,43 +24,47 @@
   </div>
 </div>
 
-<div class="hero-title d-flex flex-column mt-5">
-    <div>
-    <%= image_tag('usicz-logo.png', width: '80') %>
-    </div>
-    <div class="medium-logo">i!iusicz</div>
-</div>
+<div class="container">
 
-<div class="h1 d-flex justify-content-center"> centralize your music in a unique place </div>
-
-<div class="container cards">
-    <div class="card">
-      <p>
-        1_
-      </p>
-      <p>
-        create your account
-      </p>
-    </div>
-    <div class="card">
-      <p>
-        2_
-      </p>
-      <p>
-        import your songs
-      </p>
-    </div>
-    <div class="card">
-      <p>
-        3_
-      </p>
-      <p>
-        listen to your music
-      </p>
+  <div class="hero-title d-flex flex-column mt-5">
+      <div>
+      <%= image_tag('usicz-logo.png', width: '80') %>
+      </div>
+      <div class="medium-logo">i!iusicz</div>
   </div>
 
-</div>
+  <div class="h1 d-flex justify-content-center"> centralize your music in a unique place </div>
 
-<div class="d-flex justify-content-center">
-  <button id="target" class="button-black m-5"><a href="<%= songs_path %>">start</a></button>
+    <div class="container cards">
+        <div class="card">
+          <p>
+            1_
+          </p>
+          <p>
+            create your account
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            2_
+          </p>
+          <p>
+            import your songs
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            3_
+          </p>
+          <p>
+            listen to your music
+          </p>
+      </div>
+
+    </div>
+
+  <div class="d-flex justify-content-center">
+    <button id="target" class="button-black m-5"><a href="<%= songs_path %>">start</a></button>
+  </div>
+
 </div>
