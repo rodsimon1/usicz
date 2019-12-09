@@ -31,8 +31,10 @@ td a:hover {
   width: 5%;
 }
 
-.track-list-row #trash-icon { visibility: hidden; }
-.track-list-row:hover #trash-icon { visibility: visible; }
+// .track-list-row #trash-icon { visibility: hidden; }
+// .track-list-row:hover #trash-icon
+.track-list-row #trash-icon { opacity: 0.1; }
+.track-list-row #trash-icon:hover { opacity: 1; }
 
 .track-list-row #play-icon { visibility: hidden; }
 .track-list-row:hover #play-icon { visibility: visible; }
