@@ -1,5 +1,5 @@
 .footbar {
-  background:$light_gray; //#F0EEEE; // sidebar bg
+  background:$light_gray;
   border-top:1px solid #e5e5e5;
   position:fixed;
   right:0;
@@ -10,7 +10,7 @@
   z-index:998;
 }
 
-.main-video {
+.main-video {  // not working
   position: fixed;
   left:150px;
   bottom: 0;
