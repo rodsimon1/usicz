@@ -60,7 +60,17 @@ overflow:visible;
   vertical-align:middle;
   width:190px;
   font-family: 'Roboto', sans-serif;
-  padding-left: 16px;
+  padding-left: 14px;
+  font-weight: bold;
+}
+
+.main-menu .nav-text-sm {
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  width:190px;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 12px;
 }
 
 .main-menu>ul.bottom-buttons {
