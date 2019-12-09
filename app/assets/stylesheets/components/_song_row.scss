@@ -24,9 +24,21 @@ td a:hover {
 // }
 
 .song-row-long {
-  width: 25%;
+  width: 28%;
 }
 
 .song-row-small {
-  width: 8%;
+  width: 5%;
 }
+
+// .track-list-row #trash-icon { visibility: hidden; }
+// .track-list-row:hover #trash-icon
+.track-list-row #trash-icon { opacity: 0.1; }
+.track-list-row #trash-icon:hover { opacity: 1; }
+
+.track-list-row #play-icon { visibility: hidden; }
+.track-list-row:hover #play-icon { visibility: visible; }
+
+// .track-list-row #play-icon { display: none; }
+// .track-list-row:hover #play-icon { display: block; }
+// .track-list-row:active #play-icon { visibility: visible; }

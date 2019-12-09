@@ -13,58 +13,70 @@
         <div>
           <%= image_tag('usicz-logo.png', width: '180') %>
         </div>
-        <div class="big-logo, width: '100'">i!iusicz</div>
+        <div class="big-logo">i!iusicz</div>
         <div class="rotated">click here to start <i class="fas fa-arrow-right"></i></div>
       <% end %>
     </div>
     <div class="scroll-down mb-5">
-      <a href="#target" class="nostyle">learn more <i class="fas fa-angle-double-down"></a></i>
+      <p class="nostyle" onclick="smoothScroll(document.getElementById('second'))">learn more <i class="fas fa-angle-double-down"></p></i>
     </div>
 
   </div>
 </div>
 
-<div class="container">
-
+<div class="second-page">
   <div class="hero-title d-flex flex-column mt-5">
-      <div>
-      <%= image_tag('usicz-logo.png', width: '80') %>
+      <div class="logo-second-page">
+        <%= image_tag('usicz-logo.png', width: '100') %>
+        <div class="medium-logo">i!iusicz</div>
       </div>
-      <div class="medium-logo">i!iusicz</div>
   </div>
 
-  <div class="h1 d-flex justify-content-center"> centralize your music in a unique place </div>
+  <div class="h1 d-flex justify-content-center" id="second"> centralize your music in a unique place </div>
 
-    <div class="container cards">
-        <div class="card">
-          <p>
-            1_
-          </p>
-          <p>
-            create your account
-          </p>
-        </div>
-        <div class="card">
-          <p>
-            2_
-          </p>
-          <p>
-            import your songs
-          </p>
-        </div>
-        <div class="card">
-          <p>
-            3_
-          </p>
-          <p>
-            listen to your music
-          </p>
-      </div>
-
+  <div class="container cards">
+    <div class="card">
+      <p> 1_ </p>
+      <p> create your account </p>
     </div>
+    <div class="card">
+      <p> 2_ </p>
+      <p> import your songs </p>
+    </div>
+    <div class="card">
+      <p> 3_ </p>
+      <p> listen to your music </p>
+    </div>
+
+  </div>
 
   <div class="d-flex justify-content-center">
     <button id="target" class="button-black m-5"><a href="<%= songs_path %>">start</a></button>
   </div>
-
 </div>
+
+<script>
+  window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+</script>
+

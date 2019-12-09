@@ -11,11 +11,11 @@
       <!-- hover: #C7C1C1 -->
       <tr>
         <th></th>
-        <th>song</th>
-        <th>artist</th>
+        <th>Title</th>
+        <th>Artist</th>
         <!-- <th>album</th> -->
-        <th>genre</th>
-        <th>source</th>
+        <th>Genre</th>
+        <th>Source</th>
         <th></th>
       </tr>
     </thead>
@@ -25,9 +25,15 @@
         <tr class="track-list-row" data-id=<%= song.external_id %>>
 
           <!-- needs to appear only when active (playing) -->
-          <td class="song-row-small"><%= image_tag('play-iconn.png', width: '32') %></td>
+          <td class="song-row-small" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
 
-          <td class="song-row-long"><%= song.title %></td>
+          <td class="song-row-long">
+            <% if song.title.nil? %>
+              <%= "Unknown Title" %>
+            <% else %>
+              <%= song.title %>
+            <% end %>
+          </td>
 
           <td class="song-row-long">
             <% if song.artist.nil? %>
@@ -37,10 +43,8 @@
             <% end %>
           </td>
 
-          <!-- <td class="song-row"><%# song.album %></td> -->
-
           <td class="song-row-long">
-            <% if song.genre == "" %>
+            <% if song.genre == "" || song.genre == nil %>
               <%= "Unknown Genre" %>
             <% else %>
               <%= song.genre %>
@@ -51,14 +55,19 @@
             <% if song.platform_id == Platform.first.id %>
               <i class="fab fa-youtube fa-2x"></i>
             <% elsif song.platform_id == Platform.second.id %>
-              <i class="fas fa-signal fa-2x"></i>
+              <%= image_tag('deezer-logo.png', width: '32')  %>
             <% else %>
               <i class="fas fa-music" id="MusicIcon"></i>
             <% end %>
           </td>
 
-          <!-- needs to appear only when hover -->
-          <td class="song-row-small" id="trash-icon"><%= image_tag('trash-iconn.png', width: '24') %></td>
+          <td class="song-row-small" id="trash-icon">
+            <% if !song.id.nil? %>
+              <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete %>
+            <% end %>
+
+
+          </td>
 
         </tr>
       <% end %>

@@ -22,12 +22,16 @@
   position: absolute;
   font-size: 36px;
   bottom: 10px;
+  cursor: pointer;
 }
 
 .fa-angle-double-down {
   font-size: 24px;
 }
 
+.second-page {
+  height: 40vh;
+}
 
 $banana: 40px;
 
@@ -85,4 +89,15 @@ $banana: 40px;
 .opening-logo {
   width: 50vw;
   height: 60vh;
+}
+
+.logo-second-page {
+  text-align: center;
+  position: relative;
+  bottom: 30%;
+  left: 0%;
+}
+
+#target {
+  width: 250px;
 }
