@@ -17,3 +17,13 @@
   border: 1px solid $dark_white;
   z-index:999;
 }
+
+#deezer-container {
+  position: relative;
+  float: right;
+}
+
+#player {
+  position: relative;
+  left: 60px;
+}
