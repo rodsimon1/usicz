@@ -1,48 +1,49 @@
 <div class="footbar">
+  <div id="deezer-container">
+    <div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=3135556&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="700" data-height="350"></div>
+  </div>
   <div id="player"></div>
   <nav class="main-video">
     <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
+      window.players = window.players || {};
       function onYouTubeIframeAPIReady() {
-        window.player = new YT.Player('player', {
+        window.players.youtube = new YT.Player('player', {
           height: '200',
           width: '500',
-          videoId: '2lAe1cqCOXo',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
+          videoId: '2lAe1cqCOXo'
         });
       }
 
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
+      function loadDeezer() {
+        var w = document[typeof document.getElementsByClassName === 'function' ? 'getElementsByClassName' : 'querySelectorAll']('deezer-widget-player');
+        for (var i = 0, l = w.length; i < l; i++) {
+          w[i].innerHTML = '';
+          var el = document.createElement('iframe');
+          el.src = w[i].getAttribute('data-src');
+          el.scrolling = w[i].getAttribute('data-scrolling');
+          el.frameBorder = w[i].getAttribute('data-frameborder');
+          el.setAttribute('frameBorder', w[i].getAttribute('data-frameborder'));
+          el.allowTransparency = w[i].getAttribute('data-allowTransparency');
+          el.width = w[i].getAttribute('data-width');
+          el.height = w[i].getAttribute('data-height');
+          w[i].appendChild(el);
         }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      }
+      };
 
+      let deezerContainer = document.getElementById("deezer-container")
+      document.querySelectorAll(".track-list-row.deezer").forEach((element) => {
+        element.addEventListener("click", (event) => {
+          let songId = element.dataset.id;
+          deezerContainer.innerHTML = `<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=${songId}&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="700" data-height="350"></div>`
+          loadDeezer();
+        })
+      })
     </script>
 
   </nav>
