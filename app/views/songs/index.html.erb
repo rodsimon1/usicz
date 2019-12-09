@@ -62,7 +62,11 @@
           </td>
 
           <td class="song-row-small" id="trash-icon">
-            <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete %>
+            <% if !song.id.nil? %>
+              <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete %>
+            <% end %>
+
+
           </td>
 
         </tr>

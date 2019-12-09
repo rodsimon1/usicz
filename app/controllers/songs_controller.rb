@@ -14,6 +14,6 @@ class SongsController < ApplicationController
   private
 
   def empty_song
-    Song.new(title: "Song title", artist: "Song Artist", album: "Song Album", genre: "Song Genre")
+    Song.new(title: "Empty Playlist", artist: "-", album: "-", genre: "-")
   end
 end
