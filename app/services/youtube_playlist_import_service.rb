@@ -18,7 +18,10 @@ class YoutubePlaylistImportService
     @songs = []
     # iterate over the items
     items.each do |song_item|
-      title = song_item['snippet']['title']
+      # binding.pry
+      # title = song_item['snippet']['title']
+      artist = song_item['snippet']['title'].gsub(/( - ).*/, "")
+      title = song_item['snippet']['title'].gsub(/.*( - )/, "")
       video_id = song_item['contentDetails']['videoId']
       track_query = "?part=topicDetails&id=#{video_id}&key="
       # use the videoId to get the genre through iteration
@@ -31,7 +34,7 @@ class YoutubePlaylistImportService
             @genre = genres.reject { |i| i == "Music" }.join(", ")
           end
           # save the created songs to DB
-          @songs << Song.create!(title: title, genre: @genre, external_id: video_id, platform: @platform, user_id: @user_id)
+          @songs << Song.create!(title: title, genre: @genre, artist: artist, external_id: video_id, platform: @platform, user_id: @user_id)
         end
       end
     end
