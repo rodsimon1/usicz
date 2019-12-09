@@ -41,6 +41,11 @@ a.nostyle:visited {
     color: inherit;
 }
 
+a.nostyle:hover {
+font-weight: bold;
+color: light_grey;
+}
+
 .button-white a {
   color: black;
 }
@@ -83,3 +88,4 @@ a.nostyle:visited {
     color: black;
   }
 }
+
