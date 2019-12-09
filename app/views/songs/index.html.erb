@@ -67,6 +67,14 @@
               <% end %>
             </td>
           </tr>
+        <% else %>
+          <tr>
+            <td></td>
+            <td>Empty Playlist</td>
+            <td>-</td>
+            <td>-</td>
+            <td><i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_url %>"></i></td>
+          </tr>
         <% end %>
       <% end %>
 
