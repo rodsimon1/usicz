@@ -7,7 +7,7 @@ const trackListRowInit = () => {
   };
 
   const youtubeListRows = document.querySelectorAll('.track-list-row.youtube');
-
+                                              // alterar aqui o tracklist para algo mais especifico
   youtubeListRows.forEach((trackRow) => {
     trackRow.addEventListener('click', (event) => {
       const currentRow = event.currentTarget;
