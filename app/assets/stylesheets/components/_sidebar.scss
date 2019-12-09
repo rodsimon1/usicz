@@ -1,13 +1,13 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 .main-menu:hover,nav.main-menu.expanded {
-width:150px; // expanded sidebar (original 250px)
+width:144px; // expanded sidebar (original 250px)
 overflow:visible;
 }
 
 .main-menu {
   background:$light_gray; // sidebar bg
-  border-right:1px solid #e5e5e5;
+  // border-right:1px solid #e5e5e5;
   position:fixed;
   left:0;
   top:0;
@@ -20,14 +20,26 @@ overflow:visible;
   z-index:1000;
 }
 
+
+  #usicz-logo {
+    a {
+      margin-left: -8px;
+    }
+  }
+
+
 .main-menu>ul {
-  margin:16px 8px;
+  margin: 16px 8px;
 }
 
+// ul #usicz-logo {
+//   margin:4px 2px;
+// }
+
 .main-menu li {
-  position:relative;
-  display:block;
-  width:120px; // menu when hover (needs to be -1 px)
+  position: relative;
+  display: block;
+  width: 120px; // menu when hover (needs to be -1 px)
 }
 
 .main-menu li>a {
@@ -106,11 +118,12 @@ color:#fff;
 }
 
 .logobar-text {
-  font-size: 2.6em;
+  font-size: 2.3em;
   font-weight:bolder;
 }
 
 .main-menu .appear-text { display: none; }
 .main-menu:hover .appear-logo { display: none; }
 .main-menu:hover .appear-text { display: block; }
+// .main-menu .appear-logo { display: none; }
 // .main-menu .appear-text { display: block; }
