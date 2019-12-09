@@ -14,7 +14,7 @@ const trackListRowInit = () => {
       const externalId = currentRow.dataset.id;
       console.log("Playing:", externalId)
       // changesong(externalId);
-      player.loadVideoById(externalId)
+      window.players.youtube.loadVideoById(externalId)
     })
   });
 };
