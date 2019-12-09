@@ -5,10 +5,10 @@ class SongsController < ApplicationController
   end
 
   def destroy
-    @song = Song.find(params[:id])
+    @song = Song.find_by_id(params[:id])
     @song.destroy
 
-    # redirect_to songs_path
+    redirect_to songs_path
   end
 
   private

@@ -43,8 +43,6 @@
             <% end %>
           </td>
 
-          <!-- <td class="song-row"><%# song.album %></td> -->
-
           <td class="song-row-long">
             <% if song.genre == "" || song.genre == nil %>
               <%= "Unknown Genre" %>
@@ -63,7 +61,9 @@
             <% end %>
           </td>
 
-          <td class="song-row-small" id="trash-icon"><%= image_tag('trash-icon.png', width: '24') %></td>
+          <td class="song-row-small" id="trash-icon">
+            <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete %>
+          </td>
 
         </tr>
       <% end %>
