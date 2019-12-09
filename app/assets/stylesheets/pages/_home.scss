@@ -7,7 +7,6 @@
   background-position: left;
   margin: 0;
   position: relative;
-  margin-bottom: 8em;
 }
 
 .hero-title {
@@ -16,6 +15,16 @@
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.hero-top-action {
+  position: absolute;
+  right: 0;
+}
+
+.hero-bottom-action {
+  position: absolute;
+  bottom: 0;
 }
 
 .scroll-down {
@@ -30,37 +39,34 @@
 }
 
 .second-page {
-  height: 40vh;
+  //height: 40vh;
 }
 
-$banana: 40px;
+$usp-font-size: 36px;
 
 .card {
-  height: 260px;
-  width: 260px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   background: light_gray;
   color: black;
   p {
-    font-size: $banana;
-    margin-left: 10px;
+    font-size: $usp-font-size;
   }
   font-weight: bold;
   margin-top: 10%;
-  padding: 5%;
+  padding: 1.75rem 1.25rem;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10em;
+  grid-gap: 3em;
   align-items: center;
 }
 
 @media(max-width: 768px) {
   .card {
     p {
-      font-size: $banana*0.6;
+      font-size: $usp-font-size * 0.6;
       margin-left: 5px;
     }
   }
@@ -80,8 +86,8 @@ $banana: 40px;
   transform: rotate(-15deg); /* Équivalent à rotateZ(45deg) */
   position: absolute;
   width: 350px;
-  left: 18%;
-  top: 45%;
+  left: -320px;
+  top: 50px;
   font-size: 36px;
   font-family: 'Gochi Hand',
 }
@@ -94,7 +100,7 @@ $banana: 40px;
 .logo-second-page {
   text-align: center;
   position: relative;
-  bottom: 30%;
+  bottom: 40%;
   left: 0%;
 }
 
@@ -127,3 +133,10 @@ $banana: 40px;
 body {
   background: radial-gradient(circle at center, lightgrey, white);
 }
+
+.usicz-logo-box {
+  position: relative;
+  width: 180px;
+  margin: 0 auto;
+}
+
