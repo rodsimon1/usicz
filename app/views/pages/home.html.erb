@@ -1,5 +1,5 @@
 <div class="hero-section">
-  <p class="d-flex justify-content-end mx-3">
+  <p class="sign:hover d-flex justify-content-end mx-4 pt-3">
     <% if current_user %>
       <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "nostyle"%>
     <% else %>
@@ -11,7 +11,7 @@
     <div class="opening-logo">
       <%= link_to songs_path, class: "logo-button-style" do %>
         <div>
-          <%= image_tag('usicz-logo.png', width: '200') %>
+          <%= image_tag('usicz-logo.png', width: '180') %>
         </div>
         <div class="big-logo">i!iusicz</div>
         <div class="rotated">click here to start <i class="fas fa-arrow-right"></i></div>
@@ -79,3 +79,4 @@
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 </script>
+
