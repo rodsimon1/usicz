@@ -6,15 +6,16 @@ const trackListRowInit = () => {
     player.src = `https://www.youtube.com/embed/${songId}`;
   };
 
-  const trackListRows = document.querySelectorAll('.track-list-row');
+  const youtubeListRows = document.querySelectorAll('.track-list-row.youtube');
 
-  trackListRows.forEach((trackRow) => {
+  youtubeListRows.forEach((trackRow) => {
     trackRow.addEventListener('click', (event) => {
       const currentRow = event.currentTarget;
       const externalId = currentRow.dataset.id;
       console.log("Playing:", externalId)
       // changesong(externalId);
-      window.players.youtube.loadVideoById(externalId)
+
+      window.players.youtube.loadVideoById(externalId);
     })
   });
 };

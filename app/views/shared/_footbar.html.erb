@@ -1,4 +1,7 @@
 <div class="footbar">
+  <div id="deezer-container">
+    <div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=3135556&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="700" data-height="350"></div>
+  </div>
   <div id="player"></div>
   <nav class="main-video">
     <script>
@@ -16,6 +19,31 @@
           videoId: '2lAe1cqCOXo'
         });
       }
+
+      function loadDeezer() {
+        var w = document[typeof document.getElementsByClassName === 'function' ? 'getElementsByClassName' : 'querySelectorAll']('deezer-widget-player');
+        for (var i = 0, l = w.length; i < l; i++) {
+          w[i].innerHTML = '';
+          var el = document.createElement('iframe');
+          el.src = w[i].getAttribute('data-src');
+          el.scrolling = w[i].getAttribute('data-scrolling');
+          el.frameBorder = w[i].getAttribute('data-frameborder');
+          el.setAttribute('frameBorder', w[i].getAttribute('data-frameborder'));
+          el.allowTransparency = w[i].getAttribute('data-allowTransparency');
+          el.width = w[i].getAttribute('data-width');
+          el.height = w[i].getAttribute('data-height');
+          w[i].appendChild(el);
+        }
+      };
+
+      let deezerContainer = document.getElementById("deezer-container")
+      document.querySelectorAll(".track-list-row.deezer").forEach((element) => {
+        element.addEventListener("click", (event) => {
+          let songId = element.dataset.id;
+          deezerContainer.innerHTML = `<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=${songId}&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="700" data-height="350"></div>`
+          loadDeezer();
+        })
+      })
     </script>
 
   </nav>

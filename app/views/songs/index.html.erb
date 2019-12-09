@@ -22,7 +22,7 @@
 
     <tbody>
       <% @songs.each do |song| %>
-        <tr class="track-list-row" data-id=<%= song.external_id %>>
+        <tr class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %>>
 
           <!-- needs to appear only when active (playing) -->
           <td class="song-row-small" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
