@@ -123,3 +123,7 @@ $banana: 40px;
     transform: translateY(-2px);
   }
 }
+
+body {
+  background: radial-gradient(circle at center, lightgrey, white);
+}
