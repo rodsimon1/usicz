@@ -101,12 +101,16 @@ color:#fff;
 // background-color:#999;
 }
 
+#usicz-logo {
+  // margin:20px 16px;
+}
+
 .logobar-text {
   font-size: 2.6em;
   font-weight:bolder;
 }
 
 .main-menu .appear-text { display: none; }
-.main-menu:hover .appear-logo { display: block; }
+.main-menu:hover .appear-logo { display: none; }
 .main-menu:hover .appear-text { display: block; }
-.main-menu .appear-text { display: block; }
+// .main-menu .appear-text { display: block; }

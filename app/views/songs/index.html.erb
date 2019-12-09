@@ -25,7 +25,7 @@
         <tr class="track-list-row" data-id=<%= song.external_id %>>
 
           <!-- needs to appear only when active (playing) -->
-          <td class="song-row-small" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
+          <td class="song-row-small active-song" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
 
           <td class="song-row-long">
             <% if song.title.nil? %>
