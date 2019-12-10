@@ -9,13 +9,14 @@ const trackListRowInit = () => {
   const youtubeListRows = document.querySelectorAll('.track-list-row.youtube');
 
   youtubeListRows.forEach((trackRow) => {
-    trackRow.addEventListener('click', (event) => {
-      const currentRow = event.currentTarget;
-      const externalId = currentRow.dataset.id;
-      console.log("Playing:", externalId)
-      // changesong(externalId);
-
-      window.players.youtube.loadVideoById(externalId);
+    const tableDisplays = trackRow.querySelectorAll('td.playable')
+    tableDisplays.forEach((td) => {
+      td.addEventListener('click', (event) => {
+        const externalId = trackRow.dataset.id;
+        console.log("Playing:", externalId)
+        // changesong(externalId);
+        window.players.youtube.loadVideoById(externalId);
+      })
     })
   });
 };
