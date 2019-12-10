@@ -21,8 +21,9 @@
     <tbody>
       <% @songs.each do |song| %>
         <% if !song.id.nil? %>
-          <tr class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %>>
-
+          <tr class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-link='<%= song.id %>'>
+            <!-- needs to appear only when active (playing) -->
+            
             <td class="song-row-small active-song playable" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
 
             <td class="song-row-long playable">
@@ -61,7 +62,7 @@
 
             <td class="song-row-small" id="trash-icon" onclick="removeSong();">
               <% if !song.id.nil? %>
-                <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete, remote: true %>
+                <%= image_tag('trash-icon.png', width: '24', class: 'trashIcon', data: {link: song.id}) %>
               <% end %>
             </td>
 

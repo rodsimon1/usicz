@@ -4,6 +4,7 @@ import "bootstrap";
 import { playernovo } from './player_two';  // LATER ON THIS LINE CAN BE DELETED
 
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { SweetalertDelete } from '../plugins/init_sweetalert';
 import { trackListRowInit } from '../components/yt-player';
 import { loaderHandledInit } from '../components/loaderHandledInit';
 
@@ -34,3 +35,20 @@ initSweetalert('#MusicIcon', {
   }
 });
 
+SweetalertDelete('.trashIcon', {
+  title: "You are about to delete this song!",
+  text: "Are you sure?",
+  icon: "warning",
+  buttons: {
+    delete: {
+      text: "Yes, delete",
+      value: true,
+
+    },
+    no: {
+      text: "Cancel",
+      value: false,
+    }
+  },
+  closeOnClickOutside: true
+});
