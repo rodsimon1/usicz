@@ -1,7 +1,5 @@
 <div class="footbar">
-  <div id="deezer-container">
-    <div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=500&height=200&color=ff0000&layout=dark&size=medium&type=tracks&id=3135556&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="500" data-height="200"></div>
-  </div>
+  <div id="deezer-container"></div>
   <div id="player"></div>
   <nav class="main-video">
     <script>
@@ -14,7 +12,7 @@
       window.players = window.players || {};
       function onYouTubeIframeAPIReady() {
         window.players.youtube = new YT.Player('player', {
-          height: '200',
+          height: '100',
           width: '500',
           videoId: '2lAe1cqCOXo'
         });
@@ -34,15 +32,24 @@
           el.height = w[i].getAttribute('data-height');
           w[i].appendChild(el);
         }
+
       };
 
-      let deezerContainer = document.getElementById("deezer-container")
+      function initDeezerPlayer() {
+        let deezerContainer = document.getElementById("deezer-container")
+        deezerContainer.innerHTML = `<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=500&height=100&color=ff0000&layout=dark&size=medium&type=tracks&id=60742395&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="500" data-height="100"></div>`
+        loadDeezer();
+      };
+
+      initDeezerPlayer();
+
       document.querySelectorAll(".track-list-row.deezer").forEach((element) => {
         element.addEventListener("click", (event) => {
           let songId = element.dataset.id;
-          deezerContainer.innerHTML = `<div class="deezer-widget-player" data-src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=500&height=200&color=ff0000&layout=dark&size=medium&type=tracks&id=${songId}&app_id=1" data-scrolling="no" data-frameborder="0" data-allowTransparency="true" data-width="500" data-height="200"></div>`
+          let deezerContainer = document.getElementById("deezer-container");
 
-        loadDeezer();
+          deezerContainer.querySelector('iframe').src = `https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=500&height=100&color=ff0000&layout=dark&size=medium&type=tracks&id=${songId}&app_id=1`
+          deezerContainer.querySelector('iframe').click();
         })
       })
     </script>
