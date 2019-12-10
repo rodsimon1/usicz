@@ -1,11 +1,11 @@
 <%= render 'shared/sidebar' %>
 
 
-<div style="margin-left: 90px; margin-top: 36px;">
+<div style="margin-left: 90px; margin-top: 36px; margin-bottom: 108px;">
   <h1 class="p-bold" style="padding-left: 12px">My songs</h1>
 
 
-  <table class="table table-borderless table-hover" style="margin-top: 36px">
+  <table class="table table-borderless table-hover" style="margin-top: 36px;">
     <thead class="">
       <!-- color: #F0EEEE -->
       <!-- hover: #C7C1C1 -->
@@ -22,9 +22,9 @@
 
     <tbody>
       <% @songs.each do |song| %>
-        <% if !song.id.nil? %>  <!-- Daniel put this if statement because it was not working when there is no song at playlist -->
-          <tr class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %>>
-            <!-- needs to appear only when active (playing) -->
+        <% if !song.id.nil? %>
+          <tr class="track-list-row <%= song.platform.name.parameterize %>" id="linha" data-id=<%= song.external_id %>>
+            <!-- should appear only when active (playing) -->
             <td class="song-row-small active-song" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
 
             <td class="song-row-long">
@@ -60,8 +60,7 @@
                 <i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_url %>"></i>
               <% end %>
             </td>
-
-            <td class="song-row-small" id="trash-icon">
+            <td class="song-row-small" id="trash-icon" onclick="removeSong();">
               <% if !song.id.nil? %>
                 <%= link_to (image_tag('trash-icon.png', width: '24')), song_path(song), method: :delete, remote: true %>
               <% end %>
