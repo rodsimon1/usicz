@@ -23,7 +23,10 @@ const progressMoveInit = () => {
   var width = 1;
   var id = setInterval(frame, 10);
 
-  button.addEventListener("click", () => {})
+  if(button) {
+    button.addEventListener("click", () => {})
+  }
+
   const frame = () => {
     if (width >= 100) {
       clearInterval(id);

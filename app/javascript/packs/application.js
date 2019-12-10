@@ -12,17 +12,18 @@ import { loaderHandledInit } from '../components/loaderHandledInit';
 
 import { initUsiczPlayer } from '../components/usicz_player';
 
-initUsiczPlayer();
 // datenovo();  // LATER ON THIS LINE CAN BE DELETED
-playernovo();  // LATER ON THIS LINE CAN BE DELETED
+// playernovo();  // LATER ON THIS LINE CAN BE DELETED
 initSmoothscroll();
+loaderHandledInit();
 progressMoveInit();
 
 trackListRowInit();
-loaderHandledInit();
 
+initUsiczPlayer();
 
 // SWEETALERT TRIGGERS
+
 initSweetalert('#MusicIcon', {
   title: "You library is empty",
   text: "You don’t have any songs yet.\n To play songs, import them first :)",
