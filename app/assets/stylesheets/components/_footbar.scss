@@ -27,3 +27,24 @@
   position: relative;
   left: 60px;
 }
+
+.usicz-player {
+  position: relative;
+  left: 250px;
+  width: 800px;
+  height: 100px;
+  border: 1px solid black;
+
+  .u-player-pause {
+    display: none;
+  }
+
+  &.playing {
+    .u-player-play {
+      display: none;
+    }
+    .u-player-pause {
+      display: inline-block;
+    }
+  }
+}

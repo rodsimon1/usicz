@@ -1,4 +1,11 @@
 <div class="footbar">
+  <div class="usicz-player d-flex align-items-center">
+     <%= link_to image_tag('previous-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-previous' %>
+     <%= link_to image_tag('play-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-play' %>
+     <%= link_to image_tag('pause-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-pause' %>
+     <%= link_to image_tag('next-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-next' %>
+    <!-- <img src="/images/play-icon.png" alt="play song"> -->
+  </div>
   <div id="deezer-container"></div>
   <div id="player"></div>
   <nav class="main-video">
@@ -14,7 +21,7 @@
         window.players.youtube = new YT.Player('player', {
           height: '100',
           width: '500',
-          videoId: '2lAe1cqCOXo'
+          videoId: '<%= current_user.songs.first.external_id %>'
         });
       }
 
