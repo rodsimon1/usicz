@@ -8,7 +8,10 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     @song.destroy
 
-    redirect_to songs_path
+    respond_to do |format|
+      format.html { redirect_to songs_path }
+      format.js
+    end
   end
 
   private
