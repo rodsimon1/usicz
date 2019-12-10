@@ -8,6 +8,9 @@ import { SweetalertDelete } from '../plugins/init_sweetalert';
 import { trackListRowInit } from '../components/yt-player';
 import { loaderHandledInit } from '../components/loaderHandledInit';
 
+import { initUsiczPlayer } from '../components/usicz_player';
+
+initUsiczPlayer();
 // datenovo();  // LATER ON THIS LINE CAN BE DELETED
 playernovo();  // LATER ON THIS LINE CAN BE DELETED
 
