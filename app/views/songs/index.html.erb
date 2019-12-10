@@ -31,7 +31,7 @@
               <% if song.title.nil? %>
                 <%= "Unknown Title" %>
               <% else %>
-                <%= song.title %>
+                <%= song.title.truncate(40) %>
               <% end %>
             </td>
 
@@ -39,7 +39,7 @@
               <% if song.artist.nil? %>
                 <%= "Unknown Artist" %>
               <% else %>
-                <%= song.artist %>
+                <%= song.artist.truncate(40) %>
               <% end %>
             </td>
 
