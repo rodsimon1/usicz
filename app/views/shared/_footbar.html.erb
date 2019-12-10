@@ -5,10 +5,16 @@
      <%= link_to image_tag('pause-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-pause' %>
      <%= link_to image_tag('next-song-icon.png', height: '60'), 'javascript:void(0)', class: 'u-player-next' %>
     <!-- <img src="/images/play-icon.png" alt="play song"> -->
+    <div class="progress-bar">
+      <div id="myBar" class="progress-grey">XX %</div>
+    </div>
+    <!-- <button class="progress-button" onclick="progressMoveInit()">Click Me</button> -->
   </div>
   <div id="deezer-container"></div>
   <div id="player"></div>
   <nav class="main-video">
+
+
     <script>
       var tag = document.createElement('script');
 
