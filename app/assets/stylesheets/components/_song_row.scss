@@ -3,11 +3,11 @@ tr {
 }
 
 td a {
-   display: block;
+   display: inline;
    border: 0px solid black;
-   padding: 16px;
+   padding: 0px;
    text-decoration: none;
-   width: 106%;
+   // width: 106%;
    margin-left: -0.7em;
    margin-top: -0.7em;
    margin-bottom: -1.2em;
@@ -42,3 +42,18 @@ td a:hover {
 // .track-list-row #play-icon { display: none; }
 // .track-list-row:hover #play-icon { display: block; }
 // .track-list-row:active #play-icon { visibility: visible; }
+
+.songs-table {
+  margin-left: 90px;
+  margin-top: 36px;
+  margin-bottom: 108px;
+}
+
+.songs-table .p-bold {
+  padding-left: 12px;
+}
+
+ .songs-table .table {
+  margin-top: 36px;
+  width: 97%;
+}
