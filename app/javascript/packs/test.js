@@ -1,9 +1,5 @@
-const datenovo = () => {
-  let d = new Date();
-  const datenovo = document.body.querySelector("div.datenovo")
-  if (datenovo) {
-    datenovo.innerText = "Today's date is " + d;
-  }
-};
-
-export { datenovo };
+const video = document.querySelector("video");
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+  video.removeAttribute("autoplay");
+  video.pause();
+}
