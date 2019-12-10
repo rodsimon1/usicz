@@ -8,3 +8,18 @@
 .edit_hover_class:hover a {
   visibility:visible;
 }
+
+
+// PROGRESS BAR
+.progress-bar {
+  background-color: white;
+  border-radius: 50px;
+}
+
+.progress-grey {
+  background-color: purple;
+  height: 24px;
+  width: 0;
+  text-align: left;
+  padding-left: 20px;
+}
