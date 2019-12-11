@@ -8,8 +8,11 @@ const trackListRowInit = () => {
       td.addEventListener('click', (event) => {
         const externalId = trackRow.dataset.id;
         const platform = trackRow.dataset.platform;
+        const artist = trackRow.dataset.artist;
+        const title = trackRow.dataset.title;
 
-        window.uPlayer.switchSong({ id: externalId, platform: platform })
+        window.uPlayer.switchSong({ id: externalId, platform: platform,
+                                    artist: artist, title: title })
       })
     })
   });
