@@ -19,7 +19,7 @@
         <%= link_to songs_path do %>
           <%= image_tag("song-icong2-thin.png", width:'30', class: 'ms-gray') %>
           <%= image_tag("song-iconp2-thin.png", width:'30', class: 'ms-purple') %>
-          <span class="nav-text">
+          <span class="nav-text text-ms">
             My songs
           </span>
         <% end %>
@@ -28,7 +28,7 @@
         <%= link_to new_playlist_import_path do %>
           <%= image_tag("playlist-add-icong-thin.png", width:'30', class: 'pl-gray') %>
           <%= image_tag("playlist-add-iconp-thin.png", width:'30', class: 'pl-purple') %>
-          <span class="nav-text">
+          <span class="nav-text text-pl">
             Add songs
           </span>
         <% end %>
@@ -39,7 +39,7 @@
         <%= link_to "#" do %>
           <%= image_tag("twitter-icong.png", width:'30', class: 'tw-gray') %>
           <%= image_tag("twitter-iconp.png", width:'30', class: 'tw-purple') %>
-          <span class="nav-text-sm">
+          <span class="nav-text-sm text-tw">
             Twitter
           </span>
         <% end %>
@@ -48,7 +48,7 @@
         <%= link_to "#" do %>
           <%= image_tag("instagram-icong.png", width:'30', class: 'ig-gray') %>
           <%= image_tag("instagram-iconp.png", width:'30', class: 'ig-purple') %>
-          <span class="nav-text-sm">
+          <span class="nav-text-sm text-ig">
             Instagram
           </span>
         <% end %>
@@ -57,7 +57,7 @@
         <%= link_to "#" do %>
           <%= image_tag("fb-icong.png", width:'30', class: 'fb-gray') %>
           <%= image_tag("fb-iconp.png", width:'30', class: 'fb-purple') %>
-          <span class="nav-text-sm">
+          <span class="nav-text-sm text-fb">
             Facebook
           </span>
         <% end %>
@@ -70,7 +70,7 @@
         <%= link_to destroy_user_session_path, method: :delete do %>
           <%= image_tag("signout-icong-thin.png", width:'30', class: 'so-gray') %>
           <%= image_tag("signout-iconp-thin.png", width:'30', class: 'so-purple') %>
-          <span class="nav-text">
+          <span class="nav-text text-so">
             <% if current_user %>
               Sign out
             <% else %>
