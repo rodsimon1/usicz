@@ -17,6 +17,8 @@ class UsiczPlayer {
   playSong() {
     window.players.youtube.playVideo()
     this.element.classList.add('playing')
+    document.getElementById("artistId").innerHTML = this.currentSong.artist + ` - `
+    document.getElementById("trackId").innerHTML = this.currentSong.title
   }
 
   pauseSong() {
