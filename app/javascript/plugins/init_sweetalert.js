@@ -30,5 +30,16 @@ const SweetalertDelete = (selector, options = {}) => {
   }
 };
 
+const playlistImported = (selector, options = {}) => {
+  const swalElement = document.querySelector(selector);
+  if (swalElement) { // protect other pages
+     {
+      swal(options);
+    };
+  }
+};
+
+
 export { initSweetalert };
 export { SweetalertDelete };
+export { playlistImported };

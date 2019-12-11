@@ -1,5 +1,10 @@
 <%= render 'shared/sidebar' %>
 
+<% if params[:imported].present? %>
+  <div id="display-import-message" ></div>
+<% end %>
+
+
 <div class="songs-table">
   <h1 class="p-bold">My songs</h1>
 
