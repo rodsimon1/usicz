@@ -1,10 +1,6 @@
 import "bootstrap";
 
-// import { datenovo } from './test';  // LATER ON THIS LINE CAN BE DELETED
-import { playernovo } from './player_two';  // LATER ON THIS LINE CAN BE DELETED
-
 import { initSmoothscroll } from '../plugins/init_smoothscroll';
-import { progressMoveInit } from '../components/progressMoveInit';
 import { initSweetalert } from '../plugins/init_sweetalert';
 import { SweetalertDelete } from '../plugins/init_sweetalert';
 import { playlistImported } from '../plugins/init_sweetalert';
@@ -13,12 +9,8 @@ import { loaderHandledInit } from '../components/loaderHandledInit';
 
 import { initUsiczPlayer } from '../components/usicz_player';
 
-// datenovo();  // LATER ON THIS LINE CAN BE DELETED
-// playernovo();  // LATER ON THIS LINE CAN BE DELETED
 initSmoothscroll();
 loaderHandledInit();
-progressMoveInit();
-
 trackListRowInit();
 
 initUsiczPlayer();
