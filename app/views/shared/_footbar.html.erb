@@ -8,7 +8,7 @@
     </div>
 
     <div class="nav-row2 pt-2">
-      <div class="d-flex justify-content-start">
+      <div class="d-flex justify-content-start align-items-center">
         <div class="nav-buttons pr-5">
          <%= link_to image_tag('previous-song-icon.png', height: '30'), 'javascript:void(0)', class: 'u-player-previous' %>
          <%= link_to image_tag('play-song-icon.png', height: '30'), 'javascript:void(0)', class: 'u-player-play' %>
@@ -16,6 +16,7 @@
          <%= link_to image_tag('next-song-icon.png', height: '30'), 'javascript:void(0)', class: 'u-player-next' %>
         </div>
         <!-- <img src="/images/play-icon.png" alt="play song"> -->
+
         <div class="progress-bar">
           <div id="myBar" class="progress-purple"></div>
         </div>
@@ -23,9 +24,11 @@
         <div class="speaker-icon pl-5">
           <%= link_to image_tag('speaker-icon.png', height: '30'), 'javascript:void(0)', class: 'u-player-next' %>
         </div>
+
         <div class="slidecontainer d-flex pl-3 pr-3 align-items-center">
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
+
       </div>
     </div>
   </div>
