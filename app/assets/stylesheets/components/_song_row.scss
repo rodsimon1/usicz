@@ -1,12 +1,12 @@
 .track-list-row {
   cursor: pointer;
-  $playing-color: $purple;
+  $playing-color: $dark_purple;
 
   &.playing {
     background-color: $playing-color;
 
     &:hover {
-      background-color: $red;
+      background-color: $light_purple;
     }
   }
 
