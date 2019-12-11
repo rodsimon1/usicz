@@ -1,12 +1,12 @@
 .track-list-row {
   cursor: pointer;
-  $playing-color: $purple;
+  $playing-color: $dark_purple;
 
   &.playing {
     background-color: $playing-color;
 
     &:hover {
-      background-color: $red;
+      background-color: $light_purple;
     }
   }
 
@@ -62,12 +62,12 @@ td a:hover {
 
 .songs-table {
   margin-left: 90px;
-  margin-top: 36px;
+  margin-top: 22px;
   margin-bottom: 108px;
 }
 
 .songs-table .p-bold {
-  padding-left: 12px;
+  padding-left: 55px;
 }
 
  .songs-table .table {
