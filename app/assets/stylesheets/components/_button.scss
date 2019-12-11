@@ -1,3 +1,45 @@
+.btn {
+  border-radius : 45px;
+  font-weight: bold;
+   &:hover {
+      color:purple;
+      background: white !important;
+      font-weight: bold;
+    }
+}
+
+.btn-listen {
+  border-radius : 45px;
+  width: 200px;
+  height: 75px;
+  color: purple;
+  font-size: 26px;
+  font-weight: bold;
+  background: white;
+  top: 50%;
+   &:hover {
+      color:white !important;
+      background: transparent !important;
+      border: solid 2px white
+    }
+}
+
+// .button-listen {
+//   border: 1px solid white;
+//   border-radius: 50px;
+//   width: 200px;
+//   height: 75px;
+//   background: white;
+//   color: transparent;
+//   text-align: center;
+//   padding: 8px;
+//   font-weight: bold;
+//   color: purple;
+//   font-size: 26px;
+//   text-align: center;
+// }
+
+
 .button-rounded {
   border-radius: 50px;
 }
