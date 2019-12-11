@@ -1,7 +1,7 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 .main-menu:hover,nav.main-menu.expanded {
-width:144px; // expanded sidebar (original 250px)
+width:135px; // expanded sidebar (original 250px)
 overflow:visible;
 }
 
@@ -68,6 +68,9 @@ overflow:visible;
   font-family: 'Roboto', sans-serif;
   padding-left: 14px;
   font-weight: bold;
+  &:hover {
+    color: $light_purple;
+  }
 }
 
 .main-menu .nav-text-sm {
@@ -77,6 +80,9 @@ overflow:visible;
   width:190px;
   font-family: 'Roboto', sans-serif;
   padding-left: 12px;
+  &:hover {
+    color: $light_purple;
+  }
 }
 
 .main-menu>ul.bottom-buttons {
@@ -128,6 +134,36 @@ color:#fff;
 
 .main-menu .appear-text { display: none; }
 .main-menu:hover .appear-logo { display: none; }
-.main-menu:hover .appear-text { display: block; }
+.main-menu:hover .appear-text {
+  display: block;
+  &:hover .logobar-text {
+    color: $light_purple;
+  }
+}
 // .main-menu .appear-logo { display: none; }
 // .main-menu .appear-text { display: block; }
+
+// icons
+.icon-ms .ms-purple { display: none; }
+.icon-ms:hover .ms-gray { display: none; }
+.icon-ms:hover .ms-purple { display: inline; }
+
+.icon-pl .pl-purple { display: none; }
+.icon-pl:hover .pl-gray { display: none; }
+.icon-pl:hover .pl-purple { display: inline; }
+
+.icon-tw .tw-purple { display: none; }
+.icon-tw:hover .tw-gray { display: none; }
+.icon-tw:hover .tw-purple { display: inline; }
+
+.icon-ig .ig-purple { display: none; }
+.icon-ig:hover .ig-gray { display: none; }
+.icon-ig:hover .ig-purple { display: inline; }
+
+.icon-fb .fb-purple { display: none; }
+.icon-fb:hover .fb-gray { display: none; }
+.icon-fb:hover .fb-purple { display: inline; }
+
+.icon-so .so-purple { display: none; }
+.icon-so:hover .so-gray { display: none; }
+.icon-so:hover .so-purple { display: inline; }

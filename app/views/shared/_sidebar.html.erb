@@ -15,17 +15,19 @@
       </li>
     </ul>
     <ul>
-      <li class="m-2">
+      <li class="m-2 icon-ms">
         <%= link_to songs_path do %>
-          <%= image_tag("song-icong2.png", width:'30') %>
+          <%= image_tag("song-icong2-thin.png", width:'30', class: 'ms-gray') %>
+          <%= image_tag("song-iconp2-thin.png", width:'30', class: 'ms-purple') %>
           <span class="nav-text">
             My songs
           </span>
         <% end %>
       </li>
-      <li class="m-2">
+      <li class="m-2 icon-pl">
         <%= link_to new_playlist_import_path do %>
-          <%= image_tag("playlist-add-icong.png", width:'30') %>
+          <%= image_tag("playlist-add-icong-thin.png", width:'30', class: 'pl-gray') %>
+          <%= image_tag("playlist-add-iconp-thin.png", width:'30', class: 'pl-purple') %>
           <span class="nav-text">
             Add songs
           </span>
@@ -33,25 +35,28 @@
       </li>
     </ul>
     <ul class="bottom-buttons">
-      <li class="m-2">
+      <li class="m-2 icon-tw">
         <%= link_to "#" do %>
-          <%= image_tag("twitter-icong.png", width:'30') %>
+          <%= image_tag("twitter-icong.png", width:'30', class: 'tw-gray') %>
+          <%= image_tag("twitter-iconp.png", width:'30', class: 'tw-purple') %>
           <span class="nav-text-sm">
             Twitter
           </span>
         <% end %>
       </li>
-      <li class="m-2">
+      <li class="m-2 icon-ig">
         <%= link_to "#" do %>
-          <%= image_tag("instagram-icong.png", width:'30') %>
+          <%= image_tag("instagram-icong.png", width:'30', class: 'ig-gray') %>
+          <%= image_tag("instagram-iconp.png", width:'30', class: 'ig-purple') %>
           <span class="nav-text-sm">
             Instagram
           </span>
         <% end %>
       </li>
-      <li class="m-2">
+      <li class="m-2 icon-fb">
         <%= link_to "#" do %>
-          <%= image_tag("fb-icong.png", width:'30') %>
+          <%= image_tag("fb-icong.png", width:'30', class: 'fb-gray') %>
+          <%= image_tag("fb-iconp.png", width:'30', class: 'fb-purple') %>
           <span class="nav-text-sm">
             Facebook
           </span>
@@ -60,10 +65,11 @@
       <li class="m-2">
           <%= image_tag("blank.png", width:'30') %>
       </li>
-      <li class="m-2">
+      <li class="m-2 icon-so">
         <%# link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <%= link_to destroy_user_session_path, method: :delete do %>
-          <%= image_tag("signout-icong.png", width:'30') %>
+          <%= image_tag("signout-icong-thin.png", width:'30', class: 'so-gray') %>
+          <%= image_tag("signout-iconp-thin.png", width:'30', class: 'so-purple') %>
           <span class="nav-text">
             <% if current_user %>
               Sign out
