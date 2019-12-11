@@ -8,7 +8,10 @@ class UsiczPlayer {
 
   switchSong(song) {
     window.players.youtube.loadVideoById(song.id)
+    this.currentSong = song
+
     this.playSong()
+    this.highlightCurrentSong()
   }
 
   playSong() {
@@ -21,6 +24,13 @@ class UsiczPlayer {
     this.element.classList.remove('playing')
   }
 
+  highlightCurrentSong() {
+    const songRows = document.querySelectorAll('.track-list-row')
+    songRows.forEach((songRow) => { songRow.classList.remove('playing') })
+
+    const currentSongRow = document.querySelector(`tr[data-id='${this.currentSong.id}']`)
+    currentSongRow.classList.add('playing')
+  }
   // private
 
   queryButtons() {

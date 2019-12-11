@@ -60,7 +60,7 @@
               <% end %>
             </td>
 
-            <td class="song-row-small" id="trash-icon" onclick="removeSong();">
+            <td class="song-row-small" id="trash-icon">
               <% if !song.id.nil? %>
                 <%= image_tag('trash-icon.png', width: '24', class: 'trashIcon', data: {link: song.id}) %>
               <% end %>
