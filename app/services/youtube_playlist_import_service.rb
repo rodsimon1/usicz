@@ -18,12 +18,11 @@ class YoutubePlaylistImportService
     @songs = []
     # iterate over the items
     items.each do |song_item|
-      # binding.pry
       # title = song_item['snippet']['title']
       artist = song_item['snippet']['title'].gsub(/( - ).*/, "")
       title = song_item['snippet']['title'].gsub(/.*( - )/, "")
       video_id = song_item['contentDetails']['videoId']
-      track_query = "?part=topicDetails&id=#{video_id}&key="
+      track_query = "?part=contentDetails,topicDetails&id=#{video_id}&key="
       # use the videoId to get the genre through iteration
       track_response = HTTParty.get(TRACK_URL + track_query + KEY)
       if track_response['items'][0] != nil
@@ -32,9 +31,15 @@ class YoutubePlaylistImportService
             genre_links = track_response['items'][0]['topicDetails']['topicCategories']
             genres = genre_links.map { |genre_link| genre_link.gsub(/.*(wiki\/)/, "") }
             @genre = genres.reject { |i| i == "Music" }.join(", ")
+            duration = track_response['items'][0]['contentDetails']['duration']
+            minutes = duration.gsub(/(PT)/, "").gsub(/(M)\d*(S)/, "")
+            seconds = duration.gsub(/(S)/, "").gsub(/(PT)\d*(M)/, "")
+            total_duration = (minutes * 60) + seconds
+            # binding.pry
           end
           # save the created songs to DB
-          @songs << Song.create!(title: title, genre: @genre, artist: artist, external_id: video_id, platform: @platform, user_id: @user_id)
+          @songs << Song.create!(title: title, genre: @genre, artist: artist, external_id: video_id,
+         platform: @platform, user_id: @user_id, duration: duration)
         end
       end
     end
