@@ -140,6 +140,36 @@ body {
   margin: 0 auto;
 }
 
+.video-box {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 600px;
 
+  video {
+    width: 100%;
+  }
+
+  svg {
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0; // needed for FF, Safari, Edge
+    height: 100%;
+  }
+  svg text {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  svg rect {
+    fill: white;
+  }
+  svg > rect {
+      -webkit-mask: url(#mask);
+      mask: url(#mask);
+  }
+}
 
 
