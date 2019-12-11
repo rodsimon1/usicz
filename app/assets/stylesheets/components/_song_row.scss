@@ -29,6 +29,12 @@ td a:hover {
   text-decoration: none;
 }
 
+#v-center td {
+  vertical-align: middle;
+}
+
+// td:hover {background-color: #d000ff;}
+
 // tr td {
 //   width: 100%;
 //   color: green;

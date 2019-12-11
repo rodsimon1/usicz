@@ -50,7 +50,9 @@ class UsiczPlayer {
 
 const initUsiczPlayer = () => {
   const usiczPlayer = document.querySelector('.usicz-player')
-  window.uPlayer = new UsiczPlayer(usiczPlayer)
+  if(usiczPlayer) {
+    window.uPlayer = new UsiczPlayer(usiczPlayer)
+  }
 }
 
 export { initUsiczPlayer }
