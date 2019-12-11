@@ -1,0 +1,5 @@
+meta_product_name: "i!iusicz"
+meta_title: "Play music the right way | i!iusicz"
+meta_description: "Centralize your music in a unique place."
+meta_image: "background-cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

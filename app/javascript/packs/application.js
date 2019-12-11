@@ -7,6 +7,7 @@ import { initSmoothscroll } from '../plugins/init_smoothscroll';
 import { progressMoveInit } from '../components/progressMoveInit';
 import { initSweetalert } from '../plugins/init_sweetalert';
 import { SweetalertDelete } from '../plugins/init_sweetalert';
+import { playlistImported } from '../plugins/init_sweetalert';
 import { trackListRowInit } from '../components/yt-player';
 import { loaderHandledInit } from '../components/loaderHandledInit';
 
@@ -22,8 +23,8 @@ trackListRowInit();
 
 initUsiczPlayer();
 
-// SWEETALERT TRIGGERS
 
+// SWEETALERT TRIGGERS
 initSweetalert('#MusicIcon', {
   title: "You library is empty",
   text: "You don’t have any songs yet.\n To play songs, import them first :)",
@@ -62,3 +63,11 @@ SweetalertDelete('.trashIcon', {
   },
   closeOnClickOutside: true
 });
+
+playlistImported('#display-import-message', {
+  title: "Success!",
+  text: "You have imported a playlist!",
+  button: "Awesome!",
+  icon: "success",
+  closeOnClickOutside: true
+} );

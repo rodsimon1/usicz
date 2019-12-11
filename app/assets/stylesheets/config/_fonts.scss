@@ -16,9 +16,15 @@ h1 {
 }
 
 .p-bold {
+  font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: bold;
+  &.my-songs {
+    font-size: 32px;
+  }
 }
+
+
 
 .categories-title {
   font-size: 24px;

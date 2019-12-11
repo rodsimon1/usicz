@@ -1,5 +1,16 @@
-tr {
+.track-list-row {
   cursor: pointer;
+  $playing-color: $dark_purple;
+
+  &.playing {
+    background-color: $playing-color;
+
+    &:hover {
+      background-color: $light_purple;
+    }
+  }
+
+  &.playing #play-icon { opacity: 1; }
 }
 
 td a {
@@ -51,12 +62,12 @@ td a:hover {
 
 .songs-table {
   margin-left: 90px;
-  margin-top: 36px;
+  margin-top: 22px;
   margin-bottom: 108px;
 }
 
 .songs-table .p-bold {
-  padding-left: 12px;
+  padding-left: 55px;
 }
 
  .songs-table .table {
