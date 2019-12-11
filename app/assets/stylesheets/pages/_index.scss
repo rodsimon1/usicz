@@ -12,12 +12,13 @@
 
 // PROGRESS BAR
 .progress-bar {
-  width: 100%;
+  width: 40%;
+  height: 20px;
   background-color: white;
 }
 
 .progress-purple {
   width: 1%;
-  height: 15px;
+  height: 20px;
   background-color: $medium_purple;
 }

@@ -24,6 +24,22 @@
     }
 }
 
+.btn-listen-second {
+  border-radius : 45px;
+  width: 200px;
+  height: 75px;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  background: purple;
+  top: 50%;
+   &:hover {
+      color:purple !important;
+      background: white !important;
+      border: solid 2px white
+    }
+}
+
 // .button-listen {
 //   border: 1px solid white;
 //   border-radius: 50px;
