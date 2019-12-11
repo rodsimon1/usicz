@@ -21,7 +21,7 @@
     <tbody>
       <% @songs.each do |song| %>
         <% if !song.id.nil? %>
-          <tr class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>' data-link='<%= song.id %>'>
+          <tr id="v-center" class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>' data-link='<%= song.id %>'>
             <!-- needs to appear only when active (playing) -->
 
             <td class="song-row-small active-song playable" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
