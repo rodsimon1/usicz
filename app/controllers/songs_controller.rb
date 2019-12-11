@@ -9,7 +9,6 @@ class SongsController < ApplicationController
     @song.destroy
 
     respond_to do |format|
-      format.html { redirect_to songs_path }
       format.js
     end
   end

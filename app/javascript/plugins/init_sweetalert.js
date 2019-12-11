@@ -23,7 +23,6 @@ const SweetalertDelete = (selector, options = {}) => {
               dataType: 'js',
               accept: 'js',
             })
-            document.querySelector(`tr[data-link='${swalButton.dataset.link}']`).style.display = "none"
           }
         });
       });
