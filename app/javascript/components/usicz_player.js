@@ -1,7 +1,8 @@
 class UsiczPlayer {
   constructor(element) {
     this.element = element
-    this.buttons = this.queryButtons()
+    this.controls = this.queryControls()
+    this.playing = false
 
     this.initButtonHandlers();
   }
@@ -17,6 +18,8 @@ class UsiczPlayer {
   playSong() {
     window.players.youtube.playVideo()
     this.element.classList.add('playing')
+    this.playing = true
+    this.updateTrackBar()
     document.getElementById("artistId").innerHTML = this.currentSong.artist + ` - `
     document.getElementById("trackId").innerHTML = this.currentSong.title
   }
@@ -24,7 +27,10 @@ class UsiczPlayer {
   pauseSong() {
     window.players.youtube.pauseVideo()
     this.element.classList.remove('playing')
+    this.playing = false
   }
+
+  // private
 
   highlightCurrentSong() {
     const songRows = document.querySelectorAll('.track-list-row')
@@ -33,20 +39,30 @@ class UsiczPlayer {
     const currentSongRow = document.querySelector(`tr[data-id='${this.currentSong.id}']`)
     currentSongRow.classList.add('playing')
   }
-  // private
 
-  queryButtons() {
+  updateTrackBar() {
+    const duration = players.youtube.getDuration()
+    const currentTime = players.youtube.getMediaReferenceTime()
+    const currentPercentage = ((currentTime * 100) / duration) || 0
+
+    this.controls.trackBar.style.width = `${currentPercentage}%`
+
+    if(this.playing) setTimeout(() => { this.updateTrackBar() }, 500)
+  }
+
+  queryControls() {
     return {
       play: this.element.querySelector('.u-player-play'),
       pause: this.element.querySelector('.u-player-pause'),
       previous: this.element.querySelector('.u-player-previous'),
-      next: this.element.querySelector('.u-player-next')
+      next: this.element.querySelector('.u-player-next'),
+      trackBar: this.element.querySelector('.progress-purple')
     }
   }
 
   initButtonHandlers() {
-    this.buttons.play.addEventListener('click', () => { this.playSong() })
-    this.buttons.pause.addEventListener('click', () => { this.pauseSong() })
+    this.controls.play.addEventListener('click', () => { this.playSong() })
+    this.controls.pause.addEventListener('click', () => { this.pauseSong() })
   }
 }
 

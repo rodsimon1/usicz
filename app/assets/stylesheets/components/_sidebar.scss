@@ -33,7 +33,7 @@ overflow:visible;
 .main-menu li {
   position: relative;
   display: block;
-  width: 120px; // menu when hover (needs to be -1 px)
+  width: 120px;
 }
 
 .main-menu li>a {
@@ -68,9 +68,9 @@ overflow:visible;
   font-family: 'Roboto', sans-serif;
   padding-left: 14px;
   font-weight: bold;
-  &:hover {
-    color: $light_purple;
-  }
+  // &:hover {
+  //   color: $light_purple;
+  // }
 }
 
 .main-menu .nav-text-sm {
@@ -80,9 +80,9 @@ overflow:visible;
   width:190px;
   font-family: 'Roboto', sans-serif;
   padding-left: 12px;
-  &:hover {
-    color: $light_purple;
-  }
+  // &:hover {
+  //   color: $light_purple;
+  // }
 }
 
 .main-menu>ul.bottom-buttons {
@@ -147,23 +147,29 @@ color:#fff;
 .icon-ms .ms-purple { display: none; }
 .icon-ms:hover .ms-gray { display: none; }
 .icon-ms:hover .ms-purple { display: inline; }
+.icon-ms:hover .text-ms { color: $light_purple; }
 
 .icon-pl .pl-purple { display: none; }
 .icon-pl:hover .pl-gray { display: none; }
 .icon-pl:hover .pl-purple { display: inline; }
+.icon-pl:hover .text-pl { color: $light_purple; }
 
 .icon-tw .tw-purple { display: none; }
 .icon-tw:hover .tw-gray { display: none; }
 .icon-tw:hover .tw-purple { display: inline; }
+.icon-tw:hover .text-tw { color: $light_purple; }
 
 .icon-ig .ig-purple { display: none; }
 .icon-ig:hover .ig-gray { display: none; }
 .icon-ig:hover .ig-purple { display: inline; }
+.icon-ig:hover .text-ig { color: $light_purple; }
 
 .icon-fb .fb-purple { display: none; }
 .icon-fb:hover .fb-gray { display: none; }
 .icon-fb:hover .fb-purple { display: inline; }
+.icon-fb:hover .text-fb { color: $light_purple; }
 
 .icon-so .so-purple { display: none; }
 .icon-so:hover .so-gray { display: none; }
 .icon-so:hover .so-purple { display: inline; }
+.icon-so:hover .text-so { color: $light_purple; }

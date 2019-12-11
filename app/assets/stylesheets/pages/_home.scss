@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .hero-section {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), image-url('background-1.png');
+  background-image: linear-gradient(rgba(116, 0, 143, 0.9), rgba(203, 64, 226, 0.3)), image-url('background-1.png');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,6 +95,7 @@ $usp-font-size: 36px;
 .opening-logo {
   width: 50vw;
   height: 30vh;
+  margin-bottom: 36vh;
 }
 
 .logo-second-page {
@@ -111,6 +112,7 @@ $usp-font-size: 36px;
 .arrow {
   text-align: center;
   margin: 8% 0;
+  color: white;
 }
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -131,12 +133,12 @@ $usp-font-size: 36px;
 }
 
 body {
-  background: radial-gradient(circle at center, lightgrey, white);
+  background: radial-gradient(circle at center, light-grey, white);
 }
 
 .usicz-logo-box {
   position: relative;
-  width: 180px;
+  width: 120px;
   margin: 0 auto;
 }
 

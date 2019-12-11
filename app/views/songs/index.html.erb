@@ -35,19 +35,19 @@
               <% if song.title.nil? %>
                 <%= "Unknown Title" %>
               <% else %>
-                <%= song.title.truncate(40) %>
+                <%= song.title.truncate(50) %>
               <% end %>
             </td>
 
-            <td class="song-row-long playable">
+            <td class="song-row-medium playable">
               <% if song.artist.nil? %>
                 <%= "Unknown Artist" %>
               <% else %>
-                <%= song.artist.truncate(40) %>
+                <%= song.artist.truncate(50) %>
               <% end %>
             </td>
 
-            <td class="song-row-long playable">
+            <td class="song-row-medium playable">
               <% if song.genre == "" || song.genre == nil %>
                 <%= "Unknown Genre" %>
               <% else %>
