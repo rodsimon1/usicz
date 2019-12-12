@@ -1,5 +1,5 @@
 <div class="hero-section">
-  <p class="sign:hover d-flex justify-content-end mx-4 pt-3 hero-top-action">
+  <p class="sign:hover d-flex justify-content-end mx-4 pt-3 hero-top-action" style="z-index: 1">
     <% if current_user %>
     <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-light no style"%>
     <% else %>
