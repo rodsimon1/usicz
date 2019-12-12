@@ -10,8 +10,6 @@
 
   <table class="table table-borderless table-hover">
     <thead class="">
-      <!-- color: #F0EEEE -->
-      <!-- hover: #C7C1C1 -->
       <tr>
         <th></th>
         <th>Title</th>
@@ -27,7 +25,6 @@
       <% @songs.each do |song| %>
         <% if !song.id.nil? %>
           <tr id="v-center" class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>' data-link='<%= song.id %>' data-artist='<%= song.artist %>' data-title='<%= song.title %>'>
-            <!-- needs to appear only when active (playing) -->
 
             <td class="song-row-small active-song playable" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
 
@@ -67,7 +64,7 @@
 
             <td class="song-row-small" id="trash-icon">
               <% if !song.id.nil? %>
-                <%= image_tag('trash-icon.png', width: '24', class: 'trashIcon', data: {link: song.id}) %>
+                <%= image_tag('trashlp-icon.png', width: '24', class: 'trashIcon', data: {link: song.id}) %>
               <% end %>
             </td>
 
@@ -83,54 +80,8 @@
         <% end %>
       <% end %>
 
-<!--       <div class='edit_hover_class'>
-        <a href='#'><%# image_tag('trash-icon.png', width: '40')  %></a>
-      </div>
- -->
-<!--       You could include an anchor inside every <td>, like so:
-      <tr>
-        <td><a href="#">Blah Blah</a></td>
-        <td><a href="#">1234567</a></td>
-        <td><a href="#">more text</a></td>
-      </tr>
-
-      You could then use display:block; on the anchors to make the full row clickable.
-      tr:hover {
-         background: red;
-      }
-      td a {
-         display: block;
-         border: 1px solid black;
-         padding: 16px;
-      } -->
-
     </tbody>
   </table>
-
-
-
-
-<!-- TESTS ON PLAYERS - STARTS HERE -->
-
-    <!-- <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div> -->
-
-    <!-- TESTS - CODEPEN PLAYERS - JAVASCRIPT -->
-    <%# render 'shared/player_two' %>
-    <!-- <div class="datenovo"></div> -->
-
-    <!-- HTML NATURAL PLAYER -->
-    <!-- <audio controls>
-      <source src="https://www.youtube.com/watch?v=9F49XgzlZgA" type="audio/oog">
-    </audio>
-     -->
-
-    <!-- SOUNDCLOUD EMBED PLAYER
-    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/21478921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-    </iframe>
-     -->
-
-    <!-- TESTS ON PLAYERS - ENDS HERE -->
 
   <!-- FOOTBAR PLAYERS -->
   <%= render 'shared/footbar' %>
