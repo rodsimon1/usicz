@@ -46,15 +46,35 @@
 $usp-font-size: 36px;
 
 .card {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  background: light_gray;
-  color: black;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  // background: light_gray;
+  color: white;
+  text-shadow: 0.05px 0.5px 0.05px black;
   p {
     font-size: $usp-font-size;
   }
+  border-radius: 5px;
   font-weight: bold;
   margin-top: 10%;
   padding: 1.75rem 1.25rem;
+  width: 260px;
+  height: 260px;
+}
+
+.card-1 {
+  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), url(card-album-velvet.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-2 {
+  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), url(card-album-pink.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-3 {
+  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), url(card-album-nirvana.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .cards {
