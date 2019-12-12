@@ -39,7 +39,7 @@
 }
 
 .second-page {
-  height: 100vh;
+  height: calc(100vh - 107px);
   background-color: white;
 }
 
@@ -57,8 +57,8 @@ $usp-font-size: 36px;
   font-weight: bold;
   margin-top: 10%;
   padding: 1.75rem 1.25rem;
-  width: 260px;
-  height: 260px;
+  // width: 260px;
+  // height: 260px;
 }
 
 .card-1 {
