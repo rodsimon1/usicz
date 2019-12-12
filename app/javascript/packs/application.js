@@ -80,5 +80,6 @@ playlistImported('#display-import-message', {
   text: "You have imported a playlist!",
   button: "Awesome!",
   icon: "success",
+  timer: 2000,
   closeOnClickOutside: true
 } );
