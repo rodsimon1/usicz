@@ -8,6 +8,10 @@
 <div class="songs-table">
   <h1 class="p-bold my-songs">My songs</h1>
 
+  <div class="clear-playlist">
+    <%= link_to "Clear playlist", clear_playlist_songs_path, class: "button-white-cancel clear-button", data: {link: Song.all}, method: :delete  %>
+  </div>
+
   <table class="table table-borderless table-hover">
     <thead class="">
       <!-- color: #F0EEEE -->
