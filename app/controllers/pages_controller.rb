@@ -6,4 +6,8 @@ class PagesController < ApplicationController
 
   def kitchen_sink
   end
+
+  def home_video
+
+  end
 end

@@ -2,9 +2,21 @@
   color: white;
   background-color: $dark_purple;
   font-family: "Roboto";
+  display: flex;
+  flex-direction: column;
 }
 
 .text-footer {
   color: white;
   font-family: "Roboto";
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-icon {
+  margin: 1em 1em;
+  width: 2em;
 }

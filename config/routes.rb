@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get '/kitchen_sink', to: 'pages#kitchen_sink' if Rails.env.development?
+  get '/home_video', to: 'pages#home_video' if Rails.env.development?
 
   resources :songs, only: [:index, :destroy] do
     delete :clear_playlist, on: :collection
