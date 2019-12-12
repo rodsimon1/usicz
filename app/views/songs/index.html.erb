@@ -31,6 +31,7 @@
           <tr id="v-center" class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>' data-link='<%= song.id %>' data-artist='<%= song.artist %>' data-title='<%= song.title %>'>
 
             <td class="song-row-small active-song playable" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
+            <td class="song-row-small active-song playable" id="play-iconlp"><%= image_tag('play-iconnlp.png', width: '20') %></td>
 
             <td class="song-row-long playable">
               <% if song.title.nil? %>

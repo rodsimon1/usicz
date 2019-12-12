@@ -1,16 +1,35 @@
+
 .track-list-row {
   cursor: pointer;
   $playing-color: $medium_purple;
 
+  #play-iconlp {
+    display: none;
+  }
+
   &.playing {
-    background-color: $playing-color;
+    color: $playing-color;
+    font-weight: bold;
 
     &:hover {
-      background-color: $light_purple;
+      background-image: $light_purple;
     }
   }
 
-  &.playing #play-icon { opacity: 1; }
+  &.playing {
+    #play-icon {
+      display: none;
+    }
+    #play-iconlp {
+      display: block;
+    }
+  }
+/*   &.playing #play-icon {
+    opacity: 1;
+    #play-iconlp {
+      display: block;
+    }
+  } */
 }
 
 td a {
