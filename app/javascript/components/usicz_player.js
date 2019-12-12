@@ -75,6 +75,8 @@ class UsiczPlayer {
   initButtonHandlers() {
     this.controls.play.addEventListener('click', () => { this.playSong() })
     this.controls.pause.addEventListener('click', () => { this.pauseSong() })
+    this.controls.previous.addEventListener('click', () => { this.previousSong() })
+    this.controls.next.addEventListener('click', () => { this.nextSong() })
   }
 }
 
