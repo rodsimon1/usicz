@@ -61,7 +61,7 @@
               <% if song.platform_id == Platform.first.id %>
                 <i class="fab fa-youtube fa-2x"></i>
               <% elsif song.platform_id == Platform.second.id %>
-                <%= image_tag('deezer-logo.png', width: '32')  %>
+                <%= image_tag('plat-dz-logob.png', width: '32')  %>
               <% else %>
                 <i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_path %>"></i>
               <% end %>
