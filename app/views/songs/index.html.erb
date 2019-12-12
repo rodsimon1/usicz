@@ -62,7 +62,7 @@
               <% elsif song.platform_id == Platform.second.id %>
                 <%= image_tag('deezer-logo.png', width: '32')  %>
               <% else %>
-                <i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_url %>"></i>
+                <i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_path %>"></i>
               <% end %>
             </td>
 
@@ -79,7 +79,7 @@
             <td>Empty Playlist</td>
             <td>-</td>
             <td>-</td>
-            <td><i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_url %>"></i></td>
+            <td><i class="fas fa-music" id="MusicIcon" data-link="<%= new_playlist_import_path %>"></i></td>
           </tr>
         <% end %>
       <% end %>
