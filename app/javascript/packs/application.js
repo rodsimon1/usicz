@@ -3,6 +3,7 @@ import "bootstrap";
 import { initSmoothscroll } from '../plugins/init_smoothscroll';
 import { initSweetalert } from '../plugins/init_sweetalert';
 import { SweetalertDelete } from '../plugins/init_sweetalert';
+// import { SweetalertClearAll } from '../plugins/init_sweetalert';
 import { playlistImported } from '../plugins/init_sweetalert';
 import { trackListRowInit } from '../components/yt-player';
 import { loaderHandledInit } from '../components/loaderHandledInit';
@@ -55,6 +56,24 @@ SweetalertDelete('.trashIcon', {
   },
   closeOnClickOutside: true
 });
+
+// SweetalertClearAll('.clear-button', {
+//   title: "You are about to clear your entire playlist!",
+//   text: "This action cannot be undone. Are you sure?",
+//   icon: "warning",
+//   buttons: {
+//     delete: {
+//       text: "Yes, clear everything!",
+//       value: true,
+
+//     },
+//     no: {
+//       text: "Cancel",
+//       value: false,
+//     }
+//   },
+//   closeOnClickOutside: true
+// });
 
 playlistImported('#display-import-message', {
   title: "Success!",
