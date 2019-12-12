@@ -18,18 +18,19 @@
       </div>
       <div class="big-logo">i!iusicz</div>
       <% end %>
-      <div class="play-music">Play music the right way.
-      </div>
+      <div class="play-music">Play music the right way.</div>
     </div>
 
-    <div class="btn-listen p-3">
-      listen now
+    <div >
+      <button class="btn-listen"><a href="<%= songs_path %>">listen now</a></button>
     </div>
 
     <div class="scroll-down hero-bottom-action mb-3">
       <p class="nostyle mb-1" onclick="smoothScroll(document.getElementById('second'))"><i class="fas fa-angle-double-down arrow bounce"></p></i>
     </div>
-    ​
+
+    <!-- <div>Learn more</div> -->
+
   </div>
 </div>
 
@@ -53,7 +54,7 @@
     </div>
     ​
     <div class="d-flex justify-content-center">
-      <button id="target" class="btn-listen-second p-3"><a href="<%= songs_path %>">listen now</a></button>
+      <button id="target" class="btn-listen-second"><a href="<%= songs_path %>">listen now</a></button>
     </div>
   </div>
 
