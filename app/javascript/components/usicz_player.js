@@ -15,6 +15,18 @@ class UsiczPlayer {
     this.highlightCurrentSong()
   }
 
+  nextSong() {
+    const currentSongRow = document.querySelector(`tr[data-id='${this.currentSong.id}']`)
+    const nextSongRow = currentSongRow.nextElementSibling
+    nextSongRow.querySelector('td').click()
+  }
+
+  previousSong() {
+    const currentSongRow = document.querySelector(`tr[data-id='${this.currentSong.id}']`)
+    const previousSongRow = currentSongRow.previousElementSibling
+    previousSongRow.querySelector('td').click()
+  }
+
   playSong() {
     window.players.youtube.playVideo()
     this.element.classList.add('playing')
@@ -63,6 +75,8 @@ class UsiczPlayer {
   initButtonHandlers() {
     this.controls.play.addEventListener('click', () => { this.playSong() })
     this.controls.pause.addEventListener('click', () => { this.pauseSong() })
+    this.controls.previous.addEventListener('click', () => { this.previousSong() })
+    this.controls.next.addEventListener('click', () => { this.nextSong() })
   }
 }
 

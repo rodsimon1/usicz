@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get '/kitchen_sink', to: 'pages#kitchen_sink' if Rails.env.development?
   get '/home_video', to: 'pages#home_video' if Rails.env.development?
 
-  resources :songs, only: [:index, :destroy]
-  resources :playlist_imports, only: [:new, :create]
+  resources :songs, only: [:index, :destroy] do
+    delete :clear_playlist, on: :collection
+  end
 
+  resources :playlist_imports, only: [:new, :create]
 end

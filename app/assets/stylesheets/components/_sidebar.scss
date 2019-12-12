@@ -6,7 +6,7 @@ overflow:visible;
 }
 
 .main-menu {
-  background:$light_gray; // sidebar bg
+  background:$dark_purple; // sidebar bg
   // border-right:1px solid #e5e5e5;
   position:fixed;
   left:0;
@@ -41,7 +41,7 @@ overflow:visible;
   display:table;
   border-collapse:collapse;
   border-spacing:0;
-  color:#333;
+  color: $dark_white;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   text-decoration:none;
@@ -136,6 +136,7 @@ color:#fff;
 .main-menu:hover .appear-logo { display: none; }
 .main-menu:hover .appear-text {
   display: block;
+  text-align: -webkit-center;
   &:hover .logobar-text {
     color: $light_purple;
   }

@@ -2,7 +2,7 @@
   border-radius : 45px;
   font-weight: bold;
    &:hover {
-      color:purple;
+      color: $dark_purple;
       background: white !important;
       font-weight: bold;
     }
@@ -10,34 +10,52 @@
 
 .btn-listen {
   border-radius : 45px;
+  border: 2px solid $dark_white;
   width: 200px;
-  height: 75px;
-  color: purple;
+  height: 60px;
+  color: $dark_purple;
   font-size: 26px;
   font-weight: bold;
-  background: white;
+  background: $dark_white;
   top: 50%;
-   &:hover {
-      color:white !important;
-      background: transparent !important;
-      border: solid 2px white
+
+  &:hover {
+    color: $dark_white !important;
+    background: transparent !important;
+  }
+  a {
+    padding: 1em;
+    color: $dark_purple;
+
+    &:hover {
+      color: $dark_white;
     }
+  }
 }
 
 .btn-listen-second {
   border-radius : 45px;
+  border: 2px solid $dark_purple;
   width: 200px;
-  height: 75px;
-  color: white;
+  height: 60px;
+  color: $dark_white;
   font-size: 26px;
   font-weight: bold;
-  background: purple;
+  background: $dark_purple;
   top: 50%;
+
    &:hover {
-      color:purple !important;
-      background: white !important;
-      border: solid 2px white
+      color: $dark_purple !important;
+      background: $dark_white !important;
     }
+    a {
+      padding: 1em;
+      color: $dark_white;
+
+    &:hover {
+      color: $dark_purple;
+    }
+  }
 }
 
 // .button-listen {
@@ -197,10 +215,10 @@ color: light_grey;
 }
 
 #target {
-  outline: none;
-  a {
-    padding: 1em 6em;
-  }
+  // outline: none;
+  // a {
+  //   padding: 1em;
+  // }
 }
 
 .button-white-cancel {
@@ -216,3 +234,8 @@ color: light_grey;
   margin: 10px;
 }
 
+.clear-playlist {
+  position: absolute;
+  right: 60px;
+  top: 40px;
+}

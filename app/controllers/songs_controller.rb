@@ -13,6 +13,11 @@ class SongsController < ApplicationController
     end
   end
 
+  def clear_playlist
+    current_user.songs.destroy_all
+    redirect_to songs_path
+  end
+
   private
 
   def empty_song

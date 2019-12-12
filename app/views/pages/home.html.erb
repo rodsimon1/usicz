@@ -1,9 +1,9 @@
 <div class="hero-section">
-  <p class="sign:hover d-flex justify-content-end mx-4 pt-3 hero-top-action">
+  <p class="sign:hover d-flex justify-content-end mx-4 pt-3 hero-top-action" style="z-index: 1">
     <% if current_user %>
     <%= link_to "sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-light no style"%>
     <% else %>
-    <%= link_to "sign in", new_user_session_path, method: :get, class: "nostyle"%>
+    <%= link_to "sign in", new_user_session_path, method: :get, class: "btn btn-outline-light no style"%>
     <% end %>
   </p>
   ​
@@ -12,24 +12,25 @@
       <%= link_to songs_path, class: "logo-button-style" do %>
       <div>
         <div class="usicz-logo-box">
-          <%= image_tag('usicz-logow.png', width: '140') %>
+          <%= image_tag('logodw-thin.png', width: '140') %>
           <!-- <div class="rotated">click here <br> to start <i class="fas fa-arrow-right"></i></div>-->
         </div>
       </div>
       <div class="big-logo">i!iusicz</div>
       <% end %>
-      <div class="play-music">Play music the right way.
-      </div>
+      <div class="play-music">Play music the right way.</div>
     </div>
 
-    <div class="btn-listen p-3">
-      listen now
+    <div >
+      <button class="btn-listen"><a href="<%= songs_path %>">listen now</a></button>
     </div>
 
     <div class="scroll-down hero-bottom-action mb-3">
       <p class="nostyle mb-1" onclick="smoothScroll(document.getElementById('second'))"><i class="fas fa-angle-double-down arrow bounce"></p></i>
     </div>
-    ​
+
+    <!-- <div>Learn more</div> -->
+
   </div>
 </div>
 
@@ -51,9 +52,9 @@
       <p> listen to your<br>music </p>
     </div>
   </div>
-  ​
+
   <div class="d-flex justify-content-center">
-    <button id="target" class="btn-listen-second p-3"><a href="<%= songs_path %>">listen now</a></button>
+    <button id="target" class="btn-listen-second"><a href="<%= songs_path %>">listen now</a></button>
   </div>
 </div>
 
@@ -79,5 +80,3 @@
       <div class="text-center mb-3"><strong>© 2019 www.usicz.com
       </strong></div>
 </footer>
-
-
