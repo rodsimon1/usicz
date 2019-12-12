@@ -62,12 +62,12 @@ $usp-font-size: 36px;
 }
 
 .card-1 {
-  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), url(card-album-velvet.jpg);
+  background: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), image-url('card-album-velvet.jpg');
   background-position: center;
   background-size: cover;
 }
 .card-2 {
-  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), url(card-album-pink.png);
+  background-image: linear-gradient(rgba(146, 57, 229, 0.6), rgba(203, 64, 255, 0.3)), image-url('card-album-pink.png');
   background-position: center;
   background-size: cover;
 }
