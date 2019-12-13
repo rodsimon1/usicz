@@ -1,6 +1,12 @@
 class SongsController < ApplicationController
   def index
-    @songs = Song.all
+    if params[:shuffle]
+      @songs = Song.all.shuffle
+    elsif params[:order]
+      @songs = Song.all.order(:title)
+    else
+      @songs = Song.all
+    end
     @songs = [empty_song] if @songs.empty?
   end
 
