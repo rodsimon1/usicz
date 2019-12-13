@@ -87,7 +87,7 @@
   width: 80px;
   height: 40px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  background: white;
+  background: transparent;
   color: black;
   text-align: center;
   padding: 8px;
@@ -108,6 +108,42 @@
     color: white;
   }
   color: white;
+}
+
+.button-purple {
+  border: 1px solid $dark_purple;
+  border-radius: 45px;
+  height: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: $dark_purple;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  a {
+    color: white;
+  }
+  color: white;
+}
+
+.button-white-cancel {
+  border: 1px solid $dark_purple;
+  border-radius: 45px;
+  width: 80px;
+  height: 40px;
+  // box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  background: transparent;
+  color: $dark_purple;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    background: $dark_white;
+    color: $dark_purple;
+  }
 }
 
 .swal-button {
@@ -222,19 +258,6 @@ color: light_grey;
   // a {
   //   padding: 1em;
   // }
-}
-
-.button-white-cancel {
-  border: 1px solid black;
-  border-radius: 50px;
-  width: 80px;
-  height: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  background: white;
-  color: black;
-  text-align: center;
-  padding: 10px;
-  margin: 10px;
 }
 
 .clear-playlist {

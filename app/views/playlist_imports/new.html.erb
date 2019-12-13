@@ -1,7 +1,7 @@
 <div class="hero-title d-flex flex-column mt-5">
   <div>
     <%= link_to root_path, class: "logo-button-style" do  %>
-      <%= image_tag('logob-thin.png', width: '80') %>
+      <%= image_tag('logodp-thin.png', width: '80') %>
   </div>
     <div class="medium-logo">i!iusicz</div>
    <% end %>
@@ -30,28 +30,28 @@
             <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.second.id %>"
             name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.second.id.to_s %>"> <!-- Check Platform.all on console -->
             <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.second.id.to_s %>">
-              <%= image_tag "plat-dz-logob.png", class: "logo-deez-import", alt: "Deezer" %></label>
+              <%= image_tag "plat-dz-logodp.png", class: "logo-deez-import", alt: "Deezer" %></label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.third.id %>"
             name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.third.id.to_s %>"> <!-- 16 -->
             <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.third.id.to_s %>">
-              <%= image_tag "plat-sf-logob.png", class: "logo-spot-import", alt: "Spotify" %></label>
+              <%= image_tag "plat-sf-logodp.png", class: "logo-spot-import", alt: "Spotify" %></label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.first.id %>"
             name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.first.id.to_s %>"> <!-- 14 -->
             <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.first.id.to_s %>">
-            <%= image_tag "plat-yt-logob.png", class: "logo-yt-import", alt: "YouTube" %></label>
+            <%= image_tag "plat-yt-logodp.png", class: "logo-yt-import", alt: "YouTube" %></label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.fourth.id %>"
             name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.fourth.id.to_s %>"> <!-- 17 -->
             <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.fourth.id.to_s %>">
-              <%= image_tag "plat-sc-logob.png", class: "logo-sc-import", alt: "SoundCloud" %></label>
+              <%= image_tag "plat-sc-logodp.png", class: "logo-sc-import", alt: "SoundCloud" %></label>
           </div>
         </div>
 
@@ -65,7 +65,7 @@
       </div>
 
       <input type="submit" name="commit" value="Add songs"
-      class="btn button-rounded button-black loader-handled" data-disable-with="Add songs">
+      class="btn button-rounded button-purple loader-handled" data-disable-with="Add songs">
       <a class="button-rounded button-white-cancel" href="/songs">cancel</a>
 
     </form>
