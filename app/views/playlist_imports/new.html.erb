@@ -28,39 +28,36 @@
 
         <div class="d-flex justify-content-around">
           <div class="form-check">
-            <input class="form-check-input radio_buttons required" type="radio" value="13"
-            name="playlist_import[platform_id]" id="playlist_import_platform_id_13">
-            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_13">
+            <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.second.id %>"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.second.id.to_s %>"> <!-- 15 -->
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.second.id.to_s %>">
               <%= image_tag "plat-dz-logob.png", class: "logo-deez-import", alt: "alttext" %></label>
           </div>
 
           <div class="form-check">
-            <input class="form-check-input radio_buttons required" type="radio" value="14"
-            name="playlist_import[platform_id]" id="playlist_import_platform_id_14">
-            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_14">
+            <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.third.id %>"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.third.id.to_s %>"> <!-- 16 -->
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.third.id.to_s %>">
               <%= image_tag "plat-sf-logob.png", class: "logo-spot-import", alt: "alttext" %></label>
           </div>
 
           <div class="form-check">
-            <input class="form-check-input radio_buttons required" type="radio" value="12"
-            name="playlist_import[platform_id]" id="playlist_import_platform_id_12">
-            <label class="form-check-label collection_radio_buttons"
-            for="playlist_import_platform_id_12">
+            <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.first.id %>"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.first.id.to_s %>"> <!-- 14 -->
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.first.id.to_s %>">
             <%= image_tag "plat-yt-logob.png", class: "logo-yt-import", alt: "alttext" %></label>
           </div>
 
-
-
           <div class="form-check">
-            <input class="form-check-input radio_buttons required" type="radio" value="15"
-            name="playlist_import[platform_id]" id="playlist_import_platform_id_15">
-            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_15">
+            <input class="form-check-input radio_buttons required" type="radio" value="<%= Platform.fourth.id %>"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_<%= Platform.fourth.id.to_s %>"> <!-- 17 -->
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_<%= Platform.fourth.id.to_s %>">
               <%= image_tag "plat-sc-logob.png", class: "logo-sc-import", alt: "alttext" %></label>
           </div>
         </div>
 
       </fieldset>
-
+      <br>
       <div class="form-group url required playlist_import_playlist_url">
         <label class="url required" for="playlist_import_playlist_url"><strong>Playlist url</strong> <abbr title="required">*</abbr></label>
         <input class="form-control string url required"

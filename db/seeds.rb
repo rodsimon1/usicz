@@ -20,7 +20,8 @@ daniel = User.create(email: 'daniel@gmail.com', password: '123456')
 puts 'Creating platforms...'
 youtube = Platform.create(name: 'Youtube')
 deezer = Platform.create(name: 'Deezer')
-# soundcloud = Platform.create(name: 'Soundcloud')
+spotify = Platform.create(name: 'Spotify')
+soundcloud = Platform.create(name: 'SoundCloud')
 
 # puts 'Creating songs...'
 # song_1 = Song.create(title: "Baltimore", artist: "Nina Simone", album: "Sinnerman", genre: "Jazz", external_id: "EJIVV-mnPyY", user_id: camille.id, platform_id: youtube.id)
