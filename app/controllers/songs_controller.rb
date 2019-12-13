@@ -4,6 +4,8 @@ class SongsController < ApplicationController
       @songs = Song.all.shuffle
     elsif params[:order]
       @songs = Song.all.order(:title)
+    elsif params[:order_artist]
+      @songs = Song.all.order(:artist)
     else
       @songs = Song.all
     end
