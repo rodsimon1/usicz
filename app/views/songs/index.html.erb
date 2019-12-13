@@ -15,16 +15,15 @@
   <table class="table table-borderless table-hover">
     <thead class="">
       <tr>
-        <th></th>
-        <th class="d-flex">Title
-          <div>
-            <%= link_to image_tag('sort-icon.png', height: '15'),  {:controller => "songs", :action => "index", :order => "order" }, class: "nav-buttons pl-2", method: :get  %>
-          </div>
-          <div>
-            <%= link_to image_tag('shuffle-icon.png', height: '20'),  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "nav-buttons pl-2", method: :get  %>
-          </div>
+        <th>
+            <%= link_to image_tag('shuffle-icon.png', height: '20'),  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "nav-buttons", method: :get  %>
         </th>
-        <th>Artist</th>
+        <th>Title
+            <%= link_to image_tag('sort-icon.png', height: '15'),  {:controller => "songs", :action => "index", :order => "order" }, class: "nav-buttons pl-2", method: :get  %>
+        </th>
+        <th>Artist
+            <%= link_to image_tag('sort-icon.png', height: '15'),  {:controller => "songs", :action => "index", :order_artist => "order_artist" }, class: "nav-buttons pl-2", method: :get  %>
+        </th>
         <!-- <th>album</th> -->
         <th>Genre</th>
         <th>Source</th>
