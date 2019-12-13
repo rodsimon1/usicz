@@ -13,19 +13,77 @@
 
 <div class="row justify-content-center m-5">
   <div class="col-6">
-    <%= simple_form_for @playlist_import do |f| %>
-      <%= f.input :platform_id, collection: Platform.pluck(:name, :id), prompt: 'Select music source'%>
-      <%= f.input :playlist_url, placeholder: "Paste the url of a playlist here" %>
-      <%= f.button :submit, 'Add songs', class: "button-rounded button-black loader-handled" %>
-      <%= link_to 'cancel', songs_path, class: "button-rounded button-white-cancel" %>
 
-    <% end %>
+    <form class="simple_form new_playlist_import" id="new_playlist_import"
+    novalidate="novalidate" action="/playlist_imports" accept-charset="UTF-8" method="post">
+      <input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="authenticity_token"
+      value="BSw0PxcGJ58UQInNSqTBTbEJzZMM2vVEDjFSg7gvf8VFPI3AZqYS5MQM9fCHmV15adl8cMAE71vD5qUURYVt1Q==">
+
+      <fieldset class="form-group radio_buttons required playlist_import_platform_id">
+
+        <legend class="col-form-label pt-0"><strong>Select music source</strong> <abbr title="required">*</abbr></legend>
+
+        <input type="hidden" name="playlist_import[platform_id]" value="">
+
+        <div class="d-flex justify-content-around">
+          <div class="form-check">
+            <input class="form-check-input radio_buttons required" type="radio" value="13"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_13">
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_13">
+              <%= image_tag "plat-dz-logob.png", class: "logo-deez-import", alt: "alttext" %></label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input radio_buttons required" type="radio" value="14"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_14">
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_14">
+              <%= image_tag "plat-sf-logob.png", class: "logo-spot-import", alt: "alttext" %></label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input radio_buttons required" type="radio" value="12"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_12">
+            <label class="form-check-label collection_radio_buttons"
+            for="playlist_import_platform_id_12">
+            <%= image_tag "plat-yt-logob.png", class: "logo-yt-import", alt: "alttext" %></label>
+          </div>
+
+
+
+          <div class="form-check">
+            <input class="form-check-input radio_buttons required" type="radio" value="15"
+            name="playlist_import[platform_id]" id="playlist_import_platform_id_15">
+            <label class="form-check-label collection_radio_buttons" for="playlist_import_platform_id_15">
+              <%= image_tag "plat-sc-logob.png", class: "logo-sc-import", alt: "alttext" %></label>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <div class="form-group url required playlist_import_playlist_url">
+        <label class="url required" for="playlist_import_playlist_url"><strong>Playlist url</strong> <abbr title="required">*</abbr></label>
+        <input class="form-control string url required"
+        placeholder="Paste the url of a playlist here" type="url"
+        name="playlist_import[playlist_url]" id="playlist_import_playlist_url">
+      </div>
+
+      <input type="submit" name="commit" value="Add songs"
+      class="btn button-rounded button-black loader-handled" data-disable-with="Add songs">
+      <a class="button-rounded button-white-cancel" href="/songs">cancel</a>
+
+    </form>
+
+    <%# simple_form_for @playlist_import do |f| %>
+      <%# f.input :platform_id, collection: Platform.pluck(:name, :id), prompt: "Select music source" %>
+      <%# f.input :platform_id, collection: Platform.pluck(:name, :id), as: :radio_buttons %>
+      <%# f.input :playlist_url, placeholder: "Paste the url of a playlist here" %>
+      <%# f.button :submit, 'Add songs', class: "button-rounded button-black loader-handled" %>
+      <%# link_to 'cancel', songs_path, class: "button-rounded button-white-cancel" %>
+
+    <%# end %>
 
   </div>
 
 </div>
 
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loading-modal">
-  Launch demo modal
-</button>
- -->
