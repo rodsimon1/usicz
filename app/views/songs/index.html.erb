@@ -16,14 +16,20 @@
     <thead class="">
       <tr>
         <th></th>
+
         <th class="d-flex">Title
           <div>
-            <%= link_to image_tag('sort-icon.png', height: '15'),  {:controller => "songs", :action => "index", :order => "order" }, class: "nav-buttons pl-2", method: :get  %>
+            <%= link_to image_tag('sort-icon.png', height: '15'),
+            {:controller => "songs", :action => "index", :order => "order" },
+            class: "nav-buttons pl-2", data: {toggle: "tooltip"}, data: {placement: "top"}, title: "Sort",  method: :get  %>
           </div>
           <div>
-            <%= link_to image_tag('shuffle-icon.png', height: '20'),  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "nav-buttons pl-2", method: :get  %>
+            <%= link_to image_tag('shuffle-icon.png', height: '20'),
+            {:controller => "songs", :action => "index", :shuffle => "shuffle" },
+            class: "nav-buttons pl-2", data: {toggle: "tooltip"}, data: {placement: "top"}, title: "Shuffle", method: :get  %>
           </div>
         </th>
+
         <th>Artist</th>
         <!-- <th>album</th> -->
         <th>Genre</th>
@@ -35,7 +41,9 @@
     <tbody>
       <% @songs.each do |song| %>
         <% if !song.id.nil? %>
-          <tr id="v-center" class="track-list-row <%= song.platform.name.parameterize %>" data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>' data-link='<%= song.id %>' data-artist='<%= song.artist %>' data-title='<%= song.title %>'>
+          <tr id="v-center" class="track-list-row <%= song.platform.name.parameterize %>"
+            data-id=<%= song.external_id %> data-platform='<%= song.platform.name.parameterize %>'
+            data-link='<%= song.id %>' data-artist='<%= song.artist %>' data-title='<%= song.title %>'>
 
             <td class="song-row-small active-song playable" id="play-icon"><%= image_tag('play-iconn.png', width: '20') %></td>
             <td class="song-row-small active-song playable" id="play-iconlp"><%= image_tag('play-iconnlp.png', width: '20') %></td>
