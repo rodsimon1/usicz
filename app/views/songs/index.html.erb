@@ -8,10 +8,6 @@
 <div class="songs-table">
   <h1 class="p-bold my-songs">My songs</h1>
 
-  <div class="shuffle-playlist">
-    <%= link_to "Shuffle playlist",  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "button-white-cancel clear-button", method: :get  %>
-  </div>
-
   <div class="clear-playlist">
     <%= link_to "Clear playlist", clear_playlist_songs_path, class: "button-white-cancel clear-button", data: {link: Song.all}, method: :delete  %>
   </div>
@@ -20,9 +16,14 @@
     <thead class="">
       <tr>
         <th></th>
-        <th>Title <div class="order-playlist">
-          <%= link_to "Order playlist",  {:controller => "songs", :action => "index", :order => "order" }, class: "button-white-cancel clear-button", method: :get  %>
-        </div></th>
+        <th class="d-flex">Title
+          <div>
+            <%= link_to image_tag('sort-icon.png', height: '15'),  {:controller => "songs", :action => "index", :order => "order" }, class: "nav-buttons pl-2", method: :get  %>
+          </div>
+          <div>
+            <%= link_to image_tag('shuffle-icon.png', height: '20'),  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "nav-buttons pl-2", method: :get  %>
+          </div>
+        </th>
         <th>Artist</th>
         <!-- <th>album</th> -->
         <th>Genre</th>
