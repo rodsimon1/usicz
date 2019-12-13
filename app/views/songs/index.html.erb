@@ -8,6 +8,10 @@
 <div class="songs-table">
   <h1 class="p-bold my-songs">My songs</h1>
 
+  <div class="shuffle-playlist">
+    <%= link_to "Shuffle playlist",  {:controller => "songs", :action => "index", :shuffle => "shuffle" }, class: "button-white-cancel clear-button", method: :get  %>
+  </div>
+
   <div class="clear-playlist">
     <%= link_to "Clear playlist", clear_playlist_songs_path, class: "button-white-cancel clear-button", data: {link: Song.all}, method: :delete  %>
   </div>
@@ -16,7 +20,9 @@
     <thead class="">
       <tr>
         <th></th>
-        <th>Title</th>
+        <th>Title <div class="order-playlist">
+          <%= link_to "Order playlist",  {:controller => "songs", :action => "index", :order => "order" }, class: "button-white-cancel clear-button", method: :get  %>
+        </div></th>
         <th>Artist</th>
         <!-- <th>album</th> -->
         <th>Genre</th>
@@ -37,7 +43,7 @@
               <% if song.title.nil? %>
                 <%= "Unknown Title" %>
               <% else %>
-                <%= song.title.truncate(50) %>
+                <%= song.title.truncate(70) %>
               <% end %>
             </td>
 
@@ -45,7 +51,7 @@
               <% if song.artist.nil? %>
                 <%= "Unknown Artist" %>
               <% else %>
-                <%= song.artist.truncate(50) %>
+                <%= song.artist.truncate(70) %>
               <% end %>
             </td>
 
