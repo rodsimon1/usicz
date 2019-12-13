@@ -18,6 +18,7 @@
   font-weight: bold;
   background: $dark_white;
   top: 50%;
+  transition: 0.3s;
 
   &:hover {
     color: $dark_white !important;
@@ -43,6 +44,8 @@
   font-weight: bold;
   background: $dark_purple;
   top: 50%;
+  transition: 0.3s;
+
 
    &:hover {
       color: $dark_purple !important;
